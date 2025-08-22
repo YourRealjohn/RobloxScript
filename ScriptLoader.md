@@ -1,6 +1,6 @@
 ## Load the UI
 ```lua
-local MythixzUILib = loadstring(game:HttpGet("https://raw.githubusercontent.com/YourRealjohn/UI-LIBRARY/refs/heads/main/Script%20Loader%20Final"))()
+local MythixzUILib = loadstring(game:HttpGet("https://raw.githubusercontent.com/YourRealjohn/RobloxScript/refs/heads/main/Script%20Loader%20Final"))()
 ```
 
 ## Window
