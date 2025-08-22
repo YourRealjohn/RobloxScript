@@ -6,7 +6,7 @@ local MythixzUILib = loadstring(game:HttpGet("https://raw.githubusercontent.com/
 ## Window
 ```lua
 local ui = MythixzUILib:Create({
-    Icon = "rbxassetid://8622542227",
+    Icon = "rbxassetid://",
     Title = "Mythixz Hub",
     Description = "The best scripts in one place. All categorized and easy to use inside one beautiful UI.",
 })
