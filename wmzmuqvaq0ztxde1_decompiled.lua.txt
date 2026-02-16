@@ -1,0 +1,2754 @@
+-- filename: 
+-- version: lua51
+-- line: [0, 0] id: 1
+local r1_1 = Color3.fromRGB(0, 0, 0)
+r1_1 = Color3.fromRGB(15, 15, 15)
+r1_1 = Color3.fromRGB(60, 60, 60)
+r1_1 = Color3.fromRGB(255, 255, 255)
+r1_1 = Color3.fromRGB(255, 0, 0)
+r1_1 = Color3.fromRGB(255, 255, 255)
+r1_1 = Color3.fromRGB(255, 255, 255)
+r1_1 = Color3.fromRGB(0, 15, 255)
+r1_1 = Color3.fromRGB(140, 140, 140)
+r1_1 = UDim.new(0, 4)
+r1_1 = game:GetService("CoreGui")
+local r2_1 = game:GetService("TweenService")
+local r3_1 = game:GetService("UserInputService")
+local r4_1 = function(r0_103, r1_103, r2_103)
+  -- line: [0, 0] id: 103
+  local r3_103 = Instance.new(r0_103, r1_103)
+  if not r2_103 then
+    local r6_103 = function(r0_104, r1_104)
+      -- line: [0, 0] id: 104
+      upval_0[r0_104] = r1_104
+      return
+    end
+    table.foreach(r2_103, r6_103)
+  end
+  return r3_103
+end
+local r5_1 = game:GetService("SoundService")
+local r6_1 = Instance.new("Sound")
+r6_1.SoundId = "rbxassetid://876939830"
+r6_1.Volume = 1
+r6_1.Looped = false
+r6_1.Name = "UIClickSound"
+r6_1.Parent = r5_1
+local r7_1 = function()
+  -- line: [0, 0] id: 4
+  if not upval_0.IsPlaying then
+    upval_0:Stop()
+  end
+  upval_0:Play()
+  return
+end
+local r8_1 = function(r0_2, r1_2)
+  -- line: [0, 0] id: 2
+  if not r0_2 then
+    if not r1_2 then
+      local r4_2 = function(r0_3, r1_3)
+        -- line: [0, 0] id: 3
+        upval_0[r0_3] = r1_3
+        return
+      end
+      table.foreach(r1_2, r4_2)
+    end
+  end
+  return r0_2
+end
+local r9_1 = function(r0_109, r1_109)
+  -- line: [0, 0] id: 109
+  local r2_109 = upval_0("UICorner", r0_109)
+  r2_109.CornerRadius = upval_1.Corner_Radius
+  if not r1_109 then
+    upval_2(r2_109, r1_109)
+  end
+  return r2_109
+end
+local r10_1 = function()
+  -- line: [0, 0] id: 100
+  local r0_100 = Instance.new("Sound")
+  r0_100.SoundId = "rbxassetid://139421450430380"
+  r0_100.Volume = 1
+  local r1_100 = game:GetService("Players")
+  r1_100 = r1_100.LocalPlayer:WaitForChild("PlayerGui")
+  r0_100.Parent = r1_100
+  r0_100:Play()
+  local r3_100 = function()
+    -- line: [0, 0] id: 101
+    upval_0:Destroy()
+    return
+  end
+  r0_100.Ended:Connect(r3_100)
+  return
+end
+local r11_1 = function(r0_102, r1_102)
+  -- line: [0, 0] id: 102
+  local r2_102 = upval_0("UIStroke", r0_102)
+  r2_102.Color = upval_1.Cor_Stroke
+  r2_102.ApplyStrokeMode = "Border"
+  if not r1_102 then
+    upval_2(r2_102, r1_102)
+  end
+  return r2_102
+end
+local r12_1 = function(r0_5, r1_5, r2_5, r3_5, r4_5)
+  -- line: [0, 0] id: 5
+  local r8_5 = upval_0:Create(Enum.EasingStyle.Linear)
+  local r5_5 = upval_0:Create(upval_0, r0_5, r8_5, {[r1_5] = r2_5})
+  r5_5:Play()
+  if not r4_5 then
+    r5_5.Completed:Wait()
+  end
+  return
+end
+local r13_1 = function(r0_10)
+  -- line: [0, 0] id: 10
+  local r3_10 = function()
+    -- line: [0, 0] id: 11
+    local r3_11 = Color3.fromRGB(255, 0, 0)
+    upval_0(upval_1, "TextColor3", r3_11, 0.4, true)
+    return
+  end
+  r0_10.MouseEnter:Connect(r3_10)
+  local r3_10 = function()
+    -- line: [0, 0] id: 12
+    upval_0(upval_1, "TextColor3", upval_2.Cor_Text, 0.4, false)
+    return
+  end
+  r0_10.MouseLeave:Connect(r3_10)
+  return
+end
+local r14_1 = r4_1("ScreenGui", r1_1, {Name = "Chris HUB library"})
+local r15_1 = r1_1:FindFirstChild(r14_1.Name)
+ScreenFind = r15_1
+if not ScreenFind then
+  if ScreenFind ~= r14_1 then
+    ScreenFind:Destroy()
+  end
+end
+local r15_1 = function()
+  -- line: [0, 0] id: 17
+  upval_0:Destroy()
+  return
+end
+DestroyScript = r15_1
+local r19_1 = UDim2.new(0, 300, 1, 0)
+r19_1 = UDim2.new(1, 0, 0, 0)
+r19_1 = Vector2.new(1, 0)
+r15_1 = r4_1("Frame", r14_1, {
+  Size = r19_1,
+  Position = r19_1,
+  AnchorPoint = r19_1,
+  BackgroundTransparency = 1,
+})
+local r20_1 = UDim.new(0, 25)
+r20_1 = UDim.new(0, 25)
+r20_1 = UDim.new(0, 50)
+local r16_1 = r4_1("UIPadding", r15_1, {PaddingLeft = r20_1, PaddingTop = r20_1, PaddingBottom = r20_1})
+local r21_1 = UDim.new(0, 15)
+local r17_1 = r4_1("UIListLayout", r15_1, {Padding = r21_1, VerticalAlignment = "Bottom"})
+local r18_1 = function(r0_6)
+  -- line: [0, 0] id: 6
+  if r0_6.Title then
+  end
+  if r0_6.Text then
+  end
+  if r0_6.Time then
+  end
+  local r8_6 = UDim2.new(2, 0, 0, 0)
+  local r4_6 = upval_0("Frame", upval_1, {
+    Size = r8_6,
+    BackgroundTransparency = 1,
+    AutomaticSize = "Y",
+    Name = "Title",
+  })
+  local r9_6 = UDim2.new(0, upval_1.Size.X.Offset - 50, 0, 0)
+  r9_6 = UDim2.new(0, upval_1.Size.X.Offset, 0, 0)
+  local r5_6 = upval_0("Frame", r4_6, {
+    Size = r9_6,
+    BackgroundColor3 = upval_2.Cor_Hub,
+    Position = r9_6,
+    AutomaticSize = "Y",
+  })
+  upval_3(r5_6)
+  local r10_6 = UDim2.new(1, 0, 0, 25)
+  r10_6 = UDim2.new(0, 20, 0, 5)
+  local r6_6 = upval_0("TextLabel", r5_6, {
+    Size = r10_6,
+    Font = upval_2.Text_Font,
+    BackgroundTransparency = 1,
+    Text = "Chris HUB",
+    TextSize = 20,
+    Position = r10_6,
+    TextXAlignment = "Left",
+    TextColor3 = upval_2.Cor_Text,
+    TextWrapped = true,
+  })
+  local r11_6 = Color3.fromRGB(200, 200, 200)
+  r11_6 = UDim2.new(1, -5, 0, 5)
+  r11_6 = Vector2.new(1, 0)
+  r11_6 = UDim2.new(0, 25, 0, 25)
+  local r7_6 = upval_0("TextButton", r5_6, {
+    Text = "�",
+    Font = upval_2.Text_Font,
+    TextSize = 25,
+    BackgroundTransparency = 1,
+    TextColor3 = r11_6,
+    Position = r11_6,
+    AnchorPoint = r11_6,
+    Size = r11_6,
+  })
+  local r12_6 = UDim2.new(1, -30, 0, 0)
+  r12_6 = UDim2.new(0, 20, 0, r7_6.Size.Y.Offset + 10)
+  r8_6 = upval_0("TextLabel", r5_6, {
+    Size = r12_6,
+    Position = r12_6,
+    TextSize = 15,
+    TextColor3 = upval_2.Cor_DarkText,
+    TextXAlignment = "Left",
+    TextYAlignment = "Top",
+    AutomaticSize = "Y",
+    Text = "Notification",
+    Font = upval_2.Text_Font,
+    BackgroundTransparency = 1,
+    AutomaticSize = Enum.AutomaticSize.Y,
+    TextWrapped = true,
+  })
+  local r13_6 = UDim2.new(1, 0, 0, 2)
+  r13_6 = UDim2.new(0, 2, 0, 30)
+  r9_6 = upval_0("Frame", r5_6, {
+    Size = r13_6,
+    BackgroundColor3 = upval_2.Cor_Stroke,
+    Position = r13_6,
+    BorderSizePixel = 0,
+  })
+  upval_3(r9_6)
+  local r14_6 = UDim2.new(0, 0, 0, 5)
+  r14_6 = UDim2.new(0, 0, 1, 5)
+  upval_0("Frame", r5_6, {Size = r14_6, Position = r14_6, BackgroundTransparency = 1})
+  upval_4()
+  local r11_6 = function()
+    -- line: [0, 0] id: 7
+    local r3_7 = UDim2.new(0, 0, 0, 2)
+    upval_0(upval_1, "Size", r3_7, upval_2, true)
+    return
+  end
+  task.spawn(r11_6)
+  local r12_6 = function()
+    -- line: [0, 0] id: 9
+    upval_0()
+    local r3_9 = UDim2.new(0, -20, 0, 0)
+    upval_1(upval_2, "Position", r3_9, 0.1, true)
+    r3_9 = UDim2.new(0, upval_3.Size.X.Offset, 0, 0)
+    upval_1(upval_2, "Position", r3_9, 0.5, true)
+    upval_4:Destroy()
+    return
+  end
+  r7_6.MouseButton1Click:Connect(r12_6)
+  local r11_6 = function()
+    -- line: [0, 0] id: 8
+    local r3_8 = UDim2.new(0, -20, 0, 0)
+    upval_0(upval_1, "Position", r3_8, 0.5, true)
+    r3_8 = UDim2.new()
+    upval_0(upval_1, "Position", r3_8, 0.1, true)
+    task.wait(upval_2)
+    if not upval_1 then
+      r3_8 = UDim2.new(0, -20, 0, 0)
+      upval_0(upval_1, "Position", r3_8, 0.1, true)
+      r3_8 = UDim2.new(0, upval_3.Size.X.Offset, 0, 0)
+      upval_0(upval_1, "Position", r3_8, 0.5, true)
+      upval_4:Destroy()
+    end
+    return
+  end
+  task.spawn(r11_6)
+  return
+end
+MakeNotifi = r18_1
+local r18_1 = function(r0_13)
+  -- line: [0, 0] id: 13
+  if r0_13.Title then
+  end
+  if r0_13.Text then
+  end
+  if r0_13.Time then
+  end
+  if r0_13.Icon then
+  end
+  local r9_13 = UDim2.new(2, 0, 0, 0)
+  local r5_13 = upval_0("Frame", upval_1, {
+    Size = r9_13,
+    BackgroundTransparency = 1,
+    AutomaticSize = "Y",
+    Name = "Title",
+  })
+  local r10_13 = UDim2.new(0, upval_1.Size.X.Offset - 50, 0, 0)
+  r10_13 = UDim2.new(0, upval_1.Size.X.Offset, 0, 0)
+  local r6_13 = upval_0("Frame", r5_13, {
+    Size = r10_13,
+    BackgroundColor3 = upval_2.Cor_Hub,
+    Position = r10_13,
+    AutomaticSize = "Y",
+  })
+  upval_3(r6_13)
+  local r11_13 = UDim2.new(0, 22, 0, 22)
+  r11_13 = UDim2.new(0, 8, 0, 8)
+  local r7_13 = upval_0("ImageLabel", r6_13, {
+    Size = r11_13,
+    Position = r11_13,
+    BackgroundTransparency = 1,
+    Image = "rbxassetid://4384403532",
+    ImageColor3 = upval_2.Cor_Text,
+  })
+  local r12_13 = UDim2.new(1, -60, 0, 25)
+  r12_13 = UDim2.new(0, 35, 0, 5)
+  local r8_13 = upval_0("TextLabel", r6_13, {
+    Size = r12_13,
+    Font = upval_2.Text_Font,
+    BackgroundTransparency = 1,
+    Text = "Chris HUB",
+    TextSize = 20,
+    Position = r12_13,
+    TextXAlignment = "Left",
+    TextColor3 = upval_2.Cor_Text,
+    TextWrapped = true,
+  })
+  local r13_13 = Color3.fromRGB(200, 200, 200)
+  r13_13 = UDim2.new(1, -5, 0, 5)
+  r13_13 = Vector2.new(1, 0)
+  r13_13 = UDim2.new(0, 25, 0, 25)
+  r9_13 = upval_0("TextButton", r6_13, {
+    Text = "�",
+    Font = upval_2.Text_Font,
+    TextSize = 25,
+    BackgroundTransparency = 1,
+    TextColor3 = r13_13,
+    Position = r13_13,
+    AnchorPoint = r13_13,
+    Size = r13_13,
+  })
+  local r14_13 = UDim2.new(1, -30, 0, 0)
+  r14_13 = UDim2.new(0, 20, 0, r9_13.Size.Y.Offset + 15)
+  r10_13 = upval_0("TextLabel", r6_13, {
+    Size = r14_13,
+    Position = r14_13,
+    TextSize = 15,
+    TextColor3 = upval_2.Cor_DarkText,
+    TextXAlignment = "Left",
+    TextYAlignment = "Top",
+    AutomaticSize = Enum.AutomaticSize.Y,
+    Text = "Notification",
+    Font = upval_2.Text_Font,
+    BackgroundTransparency = 1,
+    TextWrapped = true,
+  })
+  local r15_13 = UDim2.new(1, 0, 0, 2)
+  r15_13 = UDim2.new(0, 2, 0, 30)
+  r11_13 = upval_0("Frame", r6_13, {
+    Size = r15_13,
+    BackgroundColor3 = upval_2.Cor_Stroke,
+    Position = r15_13,
+    BorderSizePixel = 0,
+  })
+  upval_3(r11_13)
+  local r16_13 = UDim2.new(0, 0, 0, 5)
+  r16_13 = UDim2.new(0, 0, 1, 5)
+  upval_0("Frame", r6_13, {Size = r16_13, Position = r16_13, BackgroundTransparency = 1})
+  upval_4()
+  local r13_13 = function()
+    -- line: [0, 0] id: 16
+    local r3_16 = UDim2.new(0, 0, 0, 2)
+    upval_0(upval_1, "Size", r3_16, upval_2, true)
+    return
+  end
+  task.spawn(r13_13)
+  local r14_13 = function()
+    -- line: [0, 0] id: 15
+    upval_0()
+    local r3_15 = UDim2.new(0, -20, 0, 0)
+    upval_1(upval_2, "Position", r3_15, 0.1, true)
+    r3_15 = UDim2.new(0, upval_3.Size.X.Offset, 0, 0)
+    upval_1(upval_2, "Position", r3_15, 0.5, true)
+    upval_4:Destroy()
+    return
+  end
+  r9_13.MouseButton1Click:Connect(r14_13)
+  local r13_13 = function()
+    -- line: [0, 0] id: 14
+    local r3_14 = UDim2.new(0, -20, 0, 0)
+    upval_0(upval_1, "Position", r3_14, 0.5, true)
+    r3_14 = UDim2.new()
+    upval_0(upval_1, "Position", r3_14, 0.1, true)
+    task.wait(upval_2)
+    if not upval_1 then
+      r3_14 = UDim2.new(0, -20, 0, 0)
+      upval_0(upval_1, "Position", r3_14, 0.1, true)
+      r3_14 = UDim2.new(0, upval_3.Size.X.Offset, 0, 0)
+      upval_0(upval_1, "Position", r3_14, 0.5, true)
+      upval_4:Destroy()
+    end
+    return
+  end
+  task.spawn(r13_13)
+  return
+end
+MakeSoundNotification = r18_1
+local r18_1 = function(r0_105)
+  -- line: [0, 0] id: 105
+  if r0_105.Title then
+  end
+  if r0_105.Text then
+  end
+  if r0_105.Time then
+  end
+  if r0_105.Icon then
+  end
+  local r9_105 = UDim2.new(2, 0, 0, 0)
+  local r5_105 = upval_0("Frame", upval_1, {
+    Size = r9_105,
+    BackgroundTransparency = 1,
+    AutomaticSize = "Y",
+    Name = "Title",
+  })
+  local r10_105 = UDim2.new(0, upval_1.Size.X.Offset - 50, 0, 0)
+  r10_105 = UDim2.new(0, upval_1.Size.X.Offset, 0, 0)
+  local r6_105 = upval_0("Frame", r5_105, {
+    Size = r10_105,
+    BackgroundColor3 = upval_2.Cor_Hub,
+    Position = r10_105,
+    AutomaticSize = "Y",
+  })
+  upval_3(r6_105)
+  local r11_105 = UDim2.new(0, 22, 0, 22)
+  r11_105 = UDim2.new(0, 8, 0, 8)
+  local r7_105 = upval_0("ImageLabel", r6_105, {
+    Size = r11_105,
+    Position = r11_105,
+    BackgroundTransparency = 1,
+    Image = "rbxassetid://4384403532",
+    ImageColor3 = upval_2.Cor_Text,
+  })
+  local r12_105 = UDim2.new(1, -60, 0, 25)
+  r12_105 = UDim2.new(0, 35, 0, 5)
+  local r8_105 = upval_0("TextLabel", r6_105, {
+    Size = r12_105,
+    Font = upval_2.Text_Font,
+    BackgroundTransparency = 1,
+    Text = "Chris HUB",
+    TextSize = 20,
+    Position = r12_105,
+    TextXAlignment = "Left",
+    TextColor3 = upval_2.Cor_Text,
+    TextWrapped = true,
+  })
+  local r13_105 = Color3.fromRGB(200, 200, 200)
+  r13_105 = UDim2.new(1, -5, 0, 5)
+  r13_105 = Vector2.new(1, 0)
+  r13_105 = UDim2.new(0, 25, 0, 25)
+  r9_105 = upval_0("TextButton", r6_105, {
+    Text = "�",
+    Font = upval_2.Text_Font,
+    TextSize = 25,
+    BackgroundTransparency = 1,
+    TextColor3 = r13_105,
+    Position = r13_105,
+    AnchorPoint = r13_105,
+    Size = r13_105,
+  })
+  local r14_105 = UDim2.new(1, -30, 0, 0)
+  r14_105 = UDim2.new(0, 20, 0, r9_105.Size.Y.Offset + 15)
+  r10_105 = upval_0("TextLabel", r6_105, {
+    Size = r14_105,
+    Position = r14_105,
+    TextSize = 15,
+    TextColor3 = upval_2.Cor_DarkText,
+    TextXAlignment = "Left",
+    TextYAlignment = "Top",
+    AutomaticSize = Enum.AutomaticSize.Y,
+    Text = "Notification",
+    Font = upval_2.Text_Font,
+    BackgroundTransparency = 1,
+    TextWrapped = true,
+  })
+  local r15_105 = UDim2.new(1, 0, 0, 2)
+  r15_105 = UDim2.new(0, 2, 0, 30)
+  r11_105 = upval_0("Frame", r6_105, {
+    Size = r15_105,
+    BackgroundColor3 = upval_2.Cor_Stroke,
+    Position = r15_105,
+    BorderSizePixel = 0,
+  })
+  upval_3(r11_105)
+  local r16_105 = UDim2.new(0, 0, 0, 5)
+  r16_105 = UDim2.new(0, 0, 1, 5)
+  upval_0("Frame", r6_105, {Size = r16_105, Position = r16_105, BackgroundTransparency = 1})
+  local r13_105 = function()
+    -- line: [0, 0] id: 107
+    local r3_107 = UDim2.new(0, 0, 0, 2)
+    upval_0(upval_1, "Size", r3_107, upval_2, true)
+    return
+  end
+  task.spawn(r13_105)
+  local r14_105 = function()
+    -- line: [0, 0] id: 106
+    upval_0()
+    local r3_106 = UDim2.new(0, -20, 0, 0)
+    upval_1(upval_2, "Position", r3_106, 0.1, true)
+    r3_106 = UDim2.new(0, upval_3.Size.X.Offset, 0, 0)
+    upval_1(upval_2, "Position", r3_106, 0.5, true)
+    upval_4:Destroy()
+    return
+  end
+  r9_105.MouseButton1Click:Connect(r14_105)
+  local r13_105 = function()
+    -- line: [0, 0] id: 108
+    local r3_108 = UDim2.new(0, -20, 0, 0)
+    upval_0(upval_1, "Position", r3_108, 0.5, true)
+    r3_108 = UDim2.new()
+    upval_0(upval_1, "Position", r3_108, 0.1, true)
+    task.wait(upval_2)
+    if not upval_1 then
+      r3_108 = UDim2.new(0, -20, 0, 0)
+      upval_0(upval_1, "Position", r3_108, 0.1, true)
+      r3_108 = UDim2.new(0, upval_3.Size.X.Offset, 0, 0)
+      upval_0(upval_1, "Position", r3_108, 0.5, true)
+      upval_4:Destroy()
+    end
+    return
+  end
+  task.spawn(r13_105)
+  return
+end
+MakeNotification = r18_1
+local r18_1 = function(r0_18)
+  -- line: [0, 0] id: 18
+  if r0_18.Hub.Title then
+  end
+  if r0_18.Hub.Animation then
+  end
+  if r0_18.Key.KeySystem then
+  end
+  if r0_18.Key.Title then
+  end
+  if r0_18.Key.Description then
+  end
+  if r0_18.Key.Keys then
+  end
+  if r0_18.Key.KeyLink then
+  end
+  if r0_18.Key.Notifi.Notifications then
+  end
+  if r0_18.Key.Notifi.Incorrectkey then
+  end
+  if r0_18.Key.Notifi.CorrectKey then
+  end
+  if r0_18.Key.Notifi.CopyKeyLink then
+  end
+  if not false then
+    local r16_18 = UDim2.new(0, 400, 0, 220)
+    r16_18 = UDim2.new(0.5, 0, 0.5, 0)
+    r16_18 = Vector2.new(0.5, 0.5)
+    local r12_18 = upval_0("Frame", upval_1, {
+      Size = r16_18,
+      Position = r16_18,
+      BackgroundColor3 = upval_2.Cor_Hub,
+      AnchorPoint = r16_18,
+      Active = true,
+      Draggable = true,
+    })
+    upval_3(r12_18)
+    local r17_18 = UDim2.new(0, 30, 0, 30)
+    r17_18 = UDim2.new(1, -10, 0, 5)
+    r17_18 = Vector2.new(1, 0)
+    r17_18 = Color3.fromRGB(200, 200, 200)
+    local r13_18 = upval_0("TextButton", r12_18, {
+      Size = r17_18,
+      Position = r17_18,
+      AnchorPoint = r17_18,
+      Text = "X",
+      Font = Enum.Font.FredokaOne,
+      TextScaled = true,
+      TextColor3 = r17_18,
+      BackgroundTransparency = 1,
+    })
+    upval_3(r13_18)
+    local r18_18 = UDim2.new(1, -80, 0, 20)
+    r18_18 = UDim2.new(0, 20, 0, 5)
+    local r14_18 = upval_0("TextLabel", r12_18, {
+      Size = r18_18,
+      Position = r18_18,
+      Text = "Key System",
+      Font = upval_2.Text_Font,
+      TextScaled = true,
+      TextColor3 = upval_2.Cor_Text,
+      TextXAlignment = "Left",
+      BackgroundTransparency = 1,
+    })
+    local r19_18 = UDim2.new(1, -80, 0, 0)
+    r19_18 = UDim2.new(0, 20, 0, 25)
+    local r15_18 = upval_0("TextLabel", r12_18, {
+      Size = r19_18,
+      Text = ".-.",
+      TextSize = 17,
+      TextColor3 = upval_2.Cor_DarkText,
+      Font = upval_2.Text_Font,
+      Position = r19_18,
+      TextXAlignment = "Left",
+      AutomaticSize = "Y",
+      TextYAlignment = "Top",
+      BackgroundTransparency = 1,
+      TextWrapped = true,
+    })
+    local r20_18 = UDim2.new(0, 150, 0, 40)
+    r20_18 = Vector2.new(1, 0)
+    r20_18 = UDim2.new(1, -35, 0, 140)
+    r16_18 = upval_0("TextButton", r12_18, {
+      Text = "Confirm",
+      Font = upval_2.Text_Font,
+      TextSize = 20,
+      TextColor3 = upval_2.Cor_Text,
+      Size = r20_18,
+      AnchorPoint = r20_18,
+      Position = r20_18,
+      BackgroundColor3 = upval_2.Cor_Options,
+    })
+    upval_3(r16_18)
+    upval_4(r16_18)
+    local r21_18 = UDim2.new(0, 150, 0, 40)
+    r21_18 = UDim2.new(0, 35, 0, 140)
+    r17_18 = upval_0("TextButton", r12_18, {
+      Text = "Get Key",
+      Font = upval_2.Text_Font,
+      TextSize = 20,
+      TextColor3 = upval_2.Cor_Text,
+      Size = r21_18,
+      Position = r21_18,
+      BackgroundColor3 = upval_2.Cor_Options,
+    })
+    upval_3(r17_18)
+    upval_4(r17_18)
+    local r22_18 = UDim2.new(1, -70, 0, 40)
+    r22_18 = UDim2.new(0, 35, 0, 90)
+    r18_18 = upval_0("TextBox", r12_18, {
+      Size = r22_18,
+      Position = r22_18,
+      BackgroundColor3 = upval_2.Cor_Options,
+      PlaceholderText = "Enter the Key",
+      Text = "",
+      TextColor3 = upval_2.Cor_Text,
+      Font = upval_2.Text_Font,
+      TextSize = 25,
+      TextWrapped = true,
+    })
+    upval_3(r18_18)
+    local r22_18 = function()
+      -- line: [0, 0] id: 65
+      local r0_65 = upval_0("UIScale", upval_1)
+      upval_2(r0_65, "Scale", 0, 0.2, true)
+      upval_1:Destroy()
+      return
+    end
+    r13_18.MouseButton1Click:Connect(r22_18)
+    local r22_18 = function()
+      -- line: [0, 0] id: 63
+      upval_0()
+      local r0_63, r1_63, r2_63 = pairs(upval_1)
+      if upval_2.Text == r4_63 then
+        upval_3 = true
+      end
+      for r3_63, r4_63 in r0_63 do
+        if not upval_4 then
+          if upval_3 then
+            MakeNotifi({Title = upval_5, Text = upval_6, Time = 5})
+          end
+        end
+        if not upval_4 then
+          MakeNotifi({Title = upval_5, Text = upval_7, Time = 5})
+        end
+        return
+    end
+    r16_18.MouseButton1Click:Connect(r22_18)
+    local r22_18 = function()
+      -- line: [0, 0] id: 90
+      upval_0()
+      if not upval_1 then
+        setclipboard(upval_2)
+        MakeNotifi({Title = upval_3, Text = upval_4, Time = 5})
+      end
+      return
+    end
+    r17_18.MouseButton1Click:Connect(r22_18)
+  end
+  task.wait()
+  if not false then
+    r20_18 = upval_0("UIScale", r12_18)
+    upval_5(r20_18, "Scale", 0, 0.4, true)
+    r12_18:Destroy()
+  end
+  r16_18 = UDim2.new(0.5, -250, 0.5, -140)
+  r12_18 = upval_0("Frame", upval_1, {
+    BackgroundColor3 = upval_2.Cor_Hub,
+    Position = r16_18,
+    Active = true,
+    Draggable = true,
+  })
+  upval_3(r12_18)
+  r17_18 = UDim2.new(1, 0, 0, 25)
+  r13_18 = upval_0("Frame", r12_18, {BackgroundTransparency = 1, Size = r17_18, Visible = false})
+  r18_18 = UDim2.new(0, 40, 1, -5)
+  r18_18 = UDim2.new(1, -10, 0, 2.5)
+  r18_18 = Vector2.new(1, 0)
+  r14_18 = upval_0("Frame", r13_18, {
+    Size = r18_18,
+    Position = r18_18,
+    AnchorPoint = r18_18,
+    BackgroundTransparency = 1,
+  })
+  r19_18 = UDim2.new(1, 0, 1, 0)
+  r19_18 = UDim2.new(0, 20, 0, 0)
+  r15_18 = upval_0("TextLabel", r13_18, {
+    Size = r19_18,
+    Position = r19_18,
+    TextColor3 = upval_2.Cor_Text,
+    Font = upval_2.Text_Font,
+    TextXAlignment = "Left",
+    Text = "Chris HUB",
+    TextSize = 20,
+    BackgroundTransparency = 1,
+    RichText = true,
+  })
+  r20_18 = UDim2.new(0.5, 0, 1, 0)
+  r16_18 = upval_0("TextButton", r14_18, {
+    Text = "-",
+    TextColor3 = upval_2.Cor_Text,
+    Size = r20_18,
+    BackgroundTransparency = 1,
+    Font = upval_2.Text_Font,
+    TextYAlignment = "Bottom",
+    TextSize = 25,
+  })
+  IsMinimized = false
+  local r19_18 = function()
+    -- line: [0, 0] id: 19
+    if IsMinimized then
+      if "+" then
+      end
+    end
+    upval_0.Text = "-"
+    if not IsMinimized then
+      IsMinimized = false
+      local r3_19 = UDim2.new(0, 500, 0, 280)
+      upval_1(upval_2, "Size", r3_19, 0.15, false)
+    end
+    IsMinimized = true
+    r3_19 = UDim2.new(0, 500, 0, 25)
+    upval_1(upval_2, "Size", r3_19, 0.15, true)
+    return
+  end
+  r16_18.MouseButton1Click:Connect(r19_18)
+  r21_18 = UDim2.new(0.5, 0, 1, 0)
+  r21_18 = Vector2.new(1, 0)
+  r21_18 = UDim2.new(1, 0, 0, 0)
+  r17_18 = upval_0("TextButton", r14_18, {
+    Text = "�",
+    TextYAlignment = "Bottom",
+    TextColor3 = upval_2.Cor_Text,
+    Size = r21_18,
+    AnchorPoint = r21_18,
+    Position = r21_18,
+    BackgroundTransparency = 1,
+    Font = upval_2.Text_Font,
+    TextSize = 25,
+  })
+  local r18_18 = function()
+    -- line: [0, 0] id: 48
+    IsMinimized = false
+    local r3_48 = UDim2.new(0, 500, 0, 280)
+    upval_0(upval_1, "Size", r3_48, 0.3, false)
+    local r4_48 = UDim2.new(1, 0, 1, 0)
+    local r0_48 = upval_2("TextButton", upval_1, {
+      BackgroundTransparency = 0.5,
+      BackgroundColor3 = upval_3.Cor_Hub,
+      Size = r4_48,
+      AutoButtonColor = false,
+      Text = "",
+      BackgroundTransparency = 0.5,
+      Visible = false,
+    })
+    upval_4(r0_48)
+    local r5_48 = UDim2.new()
+    r5_48 = Vector2.new(0.5, 0.5)
+    r5_48 = UDim2.new(0.5, 0, 0.5, 0)
+    local r1_48 = upval_2("Frame", r0_48, {
+      Size = r5_48,
+      AnchorPoint = r5_48,
+      Position = r5_48,
+      Transparency = 1,
+      BackgroundColor3 = upval_3.Cor_Hub,
+    })
+    upval_4(r1_48)
+    upval_5(r1_48)
+    local r6_48 = UDim2.new(0.8, 0, 0.25, 0)
+    r6_48 = UDim2.new(0.1, 0, 0.2)
+    local r2_48 = upval_2("TextLabel", r1_48, {
+      Size = r6_48,
+      Text = "are you sure you want to close this script??",
+      Position = r6_48,
+      TextColor3 = upval_3.Cor_Text,
+      Font = upval_3.Text_Font,
+      TextScaled = true,
+      BackgroundTransparency = 1,
+    })
+    local r7_48 = UDim2.new(0.35, 0, 0.3, 0)
+    r7_48 = UDim2.new(0.1, 0, 0.5, 0)
+    r7_48 = Color3.fromRGB(240, 0, 0)
+    r3_48 = upval_2("TextButton", r1_48, {
+      Size = r7_48,
+      Position = r7_48,
+      BackgroundColor3 = upval_3.Cor_Hub,
+      Text = "Close Script",
+      Font = upval_3.Text_Font,
+      TextColor3 = r7_48,
+      TextSize = 20,
+    })
+    upval_4(r3_48)
+    upval_5(r3_48)
+    local r8_48 = UDim2.new(0.35, 0, 0.3, 0)
+    r8_48 = UDim2.new(0.9, 0, 0.5, 0)
+    r8_48 = Vector2.new(1, 0)
+    r8_48 = Color3.fromRGB(0, 240, 0)
+    r4_48 = upval_2("TextButton", r1_48, {
+      Size = r8_48,
+      Position = r8_48,
+      AnchorPoint = r8_48,
+      BackgroundColor3 = upval_3.Cor_Hub,
+      Text = "Cancel",
+      Font = upval_3.Text_Font,
+      TextColor3 = r8_48,
+      TextSize = 20,
+    })
+    upval_4(r4_48)
+    upval_5(r4_48)
+    local r5_48 = function()
+      -- line: [0, 0] id: 52
+      if 100 < upval_0.Size.Y.Offset then
+        upval_1.Visible = true
+      end
+      upval_1.Visible = false
+      return
+    end
+    r5_48()
+    r6_48 = upval_1:GetPropertyChangedSignal("Size")
+    r6_48:Connect(r5_48)
+    upval_0(r1_48, "Transparency", 0, 0.2, false)
+    local r9_48 = UDim2.new(0.7, 0, 0.7, 0)
+    upval_0(r1_48, "Size", r9_48, 0.2, false)
+    local r8_48 = function()
+      -- line: [0, 0] id: 50
+      upval_0()
+      upval_1(upval_2, "Transparency", 1, 0.3, false)
+      local r3_50 = UDim2.new()
+      upval_1(upval_2, "Size", r3_50, 0.2, true)
+      upval_3:Destroy()
+      return
+    end
+    r4_48.MouseButton1Click:Connect(r8_48)
+    local r8_48 = function()
+      -- line: [0, 0] id: 49
+      upval_0()
+      upval_1:Destroy()
+      local r3_49 = UDim2.new()
+      upval_2(upval_3, "Size", r3_49, 0.3, true)
+      DestroyScript()
+      return
+    end
+    r3_48.MouseButton1Click:Connect(r8_48)
+    local r8_48 = function()
+      -- line: [0, 0] id: 51
+      upval_0(upval_1, "Transparency", 1, 0.3, false)
+      local r3_51 = UDim2.new()
+      upval_0(upval_1, "Size", r3_51, 0.2, true)
+      upval_2:Destroy()
+      return
+    end
+    r0_48.MouseButton1Click:Connect(r8_48)
+    return
+  end
+  local r21_18 = function()
+    -- line: [0, 0] id: 59
+    upval_0()
+    upval_1()
+    return
+  end
+  r17_18.MouseButton1Click:Connect(r21_18)
+  local r23_18 = UDim2.new(0.5, 0, 0.5, 0)
+  r23_18 = Vector2.new(0.5, 0.5)
+  r19_18 = upval_0("Frame", upval_1, {Position = r23_18, AnchorPoint = r23_18, BackgroundColor3 = upval_2.Cor_Hub})
+  r23_18 = UDim.new(0, 6)
+  upval_3(r19_18, {CornerRadius = r23_18})
+  local r24_18 = UDim2.new(1, 0, 1, 0)
+  r24_18 = UDim2.new(0, 10, 0, 0)
+  r20_18 = upval_0("TextLabel", r19_18, {
+    Text = "by : john",
+    BackgroundTransparency = 1,
+    Size = r24_18,
+    Visible = false,
+    Font = upval_2.Text_Font,
+    TextTransparency = 1,
+    TextColor3 = upval_2.Cor_Text,
+    Position = r24_18,
+    TextXAlignment = "Left",
+    TextSize = 15,
+  })
+  r24_18 = UDim2.new(0, 0, 0, 35)
+  upval_5(r19_18, "Size", r24_18, 0.5, true)
+  r24_18 = UDim2.new(0, 150, 0, 35)
+  upval_5(r19_18, "Size", r24_18, 0.5, true)
+  r20_18.Visible = true
+  task.wait(0.5)
+  for r24_18 = 1, 0, -0.1 do
+    task.wait()
+    r20_18.TextTransparency = r24_18
+  end
+  task.wait(1)
+  for r24_18 = 0, 1, 0.1 do
+    task.wait()
+    r20_18.TextTransparency = r24_18
+  end
+  r20_18:Destroy()
+  r19_18:Destroy()
+  r24_18 = UDim2.new(0, 500, 0, 35)
+  upval_5(r12_18, "Size", r24_18, 0.5, true)
+  r13_18.Visible = true
+  r24_18 = UDim2.new(0, 500, 0, 280)
+  upval_5(r12_18, "Size", r24_18, 0.3, true)
+  r12_18.Draggable = true
+  local r25_18 = UDim2.new(1, 0, 1, 0)
+  r21_18 = upval_0("Frame", r12_18, {BackgroundTransparency = 1, Size = r25_18})
+  local r22_18 = function(r0_42)
+    -- line: [0, 0] id: 42
+    if r0_42.Image then
+    end
+    if r0_42.Size then
+    end
+    if r0_42.Color then
+    end
+    if r0_42.Corner then
+    end
+    if r0_42.Stroke then
+    end
+    if r0_42.StrokeColor then
+    end
+    local r11_42 = UDim2.new(0, r2_42[1], 0, r2_42[2])
+    r11_42 = UDim2.new(0.15, 0, 0.15, 0)
+    local r7_42 = upval_1("ImageButton", upval_2, {
+      Size = r11_42,
+      Position = r11_42,
+      BackgroundColor3 = upval_0.Cor_Hub,
+      Image = "",
+      Active = true,
+      Draggable = true,
+    })
+    if not true then
+      upval_3(r7_42)
+    end
+    if not false then
+      upval_4(r7_42, {Color = upval_0.Cor_Stroke})
+    end
+    local r11_42 = function()
+      -- line: [0, 0] id: 43
+      if not upval_0 then
+        upval_0 = false
+        upval_1.Visible = true
+        if IsMinimized then
+          local r3_43 = UDim2.new(0, 500, 0, 280)
+          upval_2(upval_1, "Size", r3_43, 0.3, false)
+        end
+        r3_43 = UDim2.new(0, 500, 0, 25)
+        upval_2(upval_1, "Size", r3_43, 0.3, false)
+      end
+      upval_0 = true
+      r3_43 = UDim2.new(0, 500, 0, 0)
+      upval_2(upval_1, "Size", r3_43, 0.3, true)
+      upval_1.Visible = false
+      return
+    end
+    r7_42.MouseButton1Click:Connect(r11_42)
+    return
+  end
+  MinimizeButton = r22_18
+  local r30_18 = tonumber(r13_18.Size.Y.Offset + 2)
+  local r26_18 = UDim2.new(0, 140, 1, -r30_18)
+  r26_18 = UDim2.new(0, 0, 1, 0)
+  r26_18 = Vector2.new(0, 1)
+  r26_18 = UDim2.new()
+  r22_18 = upval_0("ScrollingFrame", r12_18, {
+    Size = r26_18,
+    Position = r26_18,
+    AnchorPoint = r26_18,
+    CanvasSize = r26_18,
+    ScrollingDirection = "Y",
+    AutomaticCanvasSize = "Y",
+    BackgroundTransparency = 1,
+    ScrollBarThickness = 2,
+  })
+  local r27_18 = UDim.new(0, 10)
+  r27_18 = UDim.new(0, 10)
+  r27_18 = UDim.new(0, 10)
+  r27_18 = UDim.new(0, 10)
+  upval_0("UIPadding", r22_18, {
+    PaddingLeft = r27_18,
+    PaddingRight = r27_18,
+    PaddingTop = r27_18,
+    PaddingBottom = r27_18,
+  })
+  r27_18 = UDim.new(0, 5)
+  upval_0("UIListLayout", r22_18, {Padding = r27_18})
+  local r29_18 = tonumber(r22_18.Size.X.Offset + 2)
+  local r31_18 = tonumber(r13_18.Size.Y.Offset + 2)
+  r27_18 = UDim2.new(1, -r29_18, 1, -r31_18)
+  r27_18 = Vector2.new(1, 1)
+  r27_18 = UDim2.new(1, 0, 1, 0)
+  r23_18 = upval_0("Frame", r12_18, {
+    Size = r27_18,
+    AnchorPoint = r27_18,
+    Position = r27_18,
+    BackgroundTransparency = 1,
+  })
+  upval_3(r23_18)
+  local r24_18 = function(r0_91)
+    -- line: [0, 0] id: 91
+    local r1_91 = upval_0("Frame", upval_1, r0_91)
+    r1_91.BackgroundColor3 = upval_2.Cor_Stroke
+    r1_91.BorderSizePixel = 0
+    return
+  end
+  r27_18 = UDim2.new(1, 0, 0, 1)
+  r27_18 = UDim2.new(0, 0, 0, r13_18.Size.Y.Offset)
+  r24_18({Size = r27_18, Position = r27_18})
+  r31_18 = tonumber(r13_18.Size.Y.Offset + 1)
+  r27_18 = UDim2.new(0, 1, 1, -r31_18)
+  r27_18 = UDim2.new(0, r22_18.Size.X.Offset, 0, r13_18.Size.Y.Offset)
+  r24_18({Size = r27_18, Position = r27_18})
+  r29_18 = r12_18:GetPropertyChangedSignal("Size")
+  local r31_18 = function()
+    -- line: [0, 0] id: 74
+    if 70 < upval_0.Size.Y.Offset then
+      upval_1.Visible = true
+      upval_2.Visible = true
+      upval_3.Visible = true
+    end
+    upval_1.Visible = false
+    upval_2.Visible = false
+    upval_3.Visible = false
+    return
+  end
+  r29_18:Connect(r31_18)
+  local r29_18 = function(r0_75)
+    -- line: [0, 0] id: 75
+    if r0_75.Name then
+    end
+    if r0_75.TabTitle then
+    end
+    if r0_75.Icon then
+    end
+    local r8_75 = UDim2.new(1, 0, 0, 25)
+    local r4_75 = upval_0("Frame", upval_1, {Size = r8_75, BackgroundTransparency = 1})
+    upval_2(r4_75)
+    upval_3(r4_75)
+    local r9_75 = UDim2.new(1, 0, 1, 0)
+    local r5_75 = upval_0("TextButton", r4_75, {Size = r9_75, BackgroundTransparency = 1, Text = ""})
+    if not nil then
+      local r11_75 = UDim2.new(0, 18, 0, 18)
+      r11_75 = UDim2.new(0, 5, 0.5, 0)
+      r11_75 = Vector2.new(0, 0.5)
+      local r7_75 = upval_0("ImageLabel", r4_75, {
+        Size = r11_75,
+        Position = r11_75,
+        AnchorPoint = r11_75,
+        BackgroundTransparency = 1,
+        Image = nil,
+        ImageTransparency = 0.2,
+      })
+    end
+    if not nil then
+      if 30 then
+      end
+    end
+    r11_75 = UDim2.new(1, -0, 1, 0)
+    if not nil then
+    end
+    if 30 then
+    end
+    r11_75 = UDim2.new(0, 0, 0, 0)
+    r7_75 = upval_0("TextLabel", r4_75, {
+      Size = r11_75,
+      Position = r11_75,
+      BackgroundTransparency = 1,
+      Font = upval_4.Text_Font,
+      TextColor3 = upval_5,
+      TextSize = upval_6,
+      Text = "Tab",
+      TextXAlignment = Enum.TextXAlignment.Left,
+    })
+    local r12_75 = UDim2.new(1, 0, 1, 0)
+    r12_75 = UDim2.new()
+    r8_75 = upval_0("ScrollingFrame", upval_7, {
+      Size = r12_75,
+      ScrollingDirection = "Y",
+      AutomaticCanvasSize = "Y",
+      CanvasSize = r12_75,
+      BackgroundTransparency = 1,
+      ScrollBarThickness = 2,
+      Visible = upval_8,
+    })
+    local r13_75 = UDim.new(0, 10)
+    r13_75 = UDim.new(0, 10)
+    r13_75 = UDim.new(0, 10)
+    r13_75 = UDim.new(0, 10)
+    upval_0("UIPadding", r8_75, {
+      PaddingLeft = r13_75,
+      PaddingRight = r13_75,
+      PaddingTop = r13_75,
+      PaddingBottom = r13_75,
+    })
+    r13_75 = UDim.new(0, 5)
+    upval_0("UIListLayout", r8_75, {Padding = r13_75})
+    if not false then
+      local r14_75 = string.gsub("Tab", " ", "-")
+      r13_75 = UDim2.new(1, 0, 0, 30)
+      r13_75 = UDim2.new(0, 30, 0, 0)
+      upval_0("TextLabel", r8_75, {
+        BackgroundTransparency = 1,
+        Text = "#" .. r14_75,
+        TextSize = 25,
+        Font = upval_4.Text_Font,
+        TextXAlignment = "Left",
+        TextColor3 = upval_4.Cor_Text,
+        Size = r13_75,
+        Position = r13_75,
+        Name = "Frame",
+      })
+    end
+    local r11_75 = function()
+      -- line: [0, 0] id: 76
+      local r0_76, r1_76, r2_76 = pairs(upval_0:GetChildren())
+      local r5_76 = r4_76:IsA("ScrollingFrame")
+      if not r5_76 then
+        r4_76.Visible = false
+      end
+      for r3_76, r4_76 in r0_76 do
+        local r0_76, r1_76, r2_76 = pairs(upval_1:GetChildren())
+        r5_76 = r4_76:IsA("Frame")
+        if not r5_76 then
+          r5_76 = r4_76:FindFirstChild("TextLabel")
+          if not r5_76 then
+            if r4_76.TextLabel ~= upval_2 then
+              upval_3(r4_76.TextLabel, "TextColor3", upval_4.Cor_DarkText, 0.3, false)
+              r4_76.TextLabel.TextSize = 14
+              r5_76 = r4_76:FindFirstChild("ImageLabel")
+              if not r5_76 then
+                upval_3(r4_76.ImageLabel, "ImageTransparency", 0.4, 0.3, false)
+              end
+            end
+          end
+        end
+        for r3_76, r4_76 in r0_76 do
+          upval_5.Visible = true
+          upval_3(upval_2, "TextColor3", upval_4.Cor_Text, 0.3, false)
+          upval_2.TextSize = 15
+          if not upval_6 then
+            upval_3(upval_6, "ImageTransparency", 0, 0.3, false)
+          end
+          return
+    end
+    r5_75.MouseButton1Click:Connect(r11_75)
+    upval_8 = false
+    upval_10 = false
+    upval_6 = 14
+    upval_5 = upval_4.Cor_DarkText
+    return r8_75
+  end
+  MakeTab = r29_18
+  local r29_18 = function(r0_69, r1_69)
+    -- line: [0, 0] id: 69
+    if r1_69.Name then
+    end
+    if r1_69.Callback then
+      local r3_69 = function()
+        -- line: [0, 0] id: 71
+        return
+      end
+    end
+    local r8_69 = UDim2.new(1, 0, 0, 25)
+    local r4_69 = upval_0("TextButton", r0_69, {
+      Size = r8_69,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      Text = "",
+      AutoButtonColor = false,
+    })
+    upval_2(r4_69)
+    upval_3(r4_69)
+    local r9_69 = UDim2.new(1, -30, 1, 0)
+    r9_69 = UDim2.new(0, 10, 0, 0)
+    local r5_69 = upval_0("TextLabel", r4_69, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Button!!",
+      Size = r9_69,
+      Position = r9_69,
+      BackgroundTransparency = 1,
+      TextXAlignment = Enum.TextXAlignment.Left,
+      Font = upval_1.Text_Font,
+    })
+    local r10_69 = UDim2.new(0, 20, 0, 20)
+    r10_69 = UDim2.new(1, -25, 0, 2)
+    local r6_69 = upval_0("ImageLabel", r4_69, {
+      Image = "rbxassetid://10734898355",
+      Size = r10_69,
+      Position = r10_69,
+      BackgroundTransparency = 1,
+      ImageColor3 = upval_1.Cor_Text,
+    })
+    local r9_69 = function()
+      -- line: [0, 0] id: 70
+      upval_0()
+      local r3_70 = Color3.fromRGB(255, 0, 0)
+      upval_1(upval_2, "ImageColor3", r3_70, 0.2, true)
+      upval_1(upval_2, "ImageColor3", upval_3.Cor_Stroke, 0.2, false)
+      return
+    end
+    r4_69.MouseButton1Click:Connect(r9_69)
+    upval_5(r5_69)
+    return
+  end
+  AddButton = r29_18
+  local r29_18 = function(r0_39, r1_39)
+    -- line: [0, 0] id: 39
+    if r1_39.Name then
+    end
+    if r1_39.Callback then
+      local r3_39 = function()
+        -- line: [0, 0] id: 41
+        return
+      end
+    end
+    local r8_39 = UDim2.new(1, 0, 0, 25)
+    local r4_39 = upval_0("TextButton", r0_39, {
+      Size = r8_39,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      Text = "",
+      AutoButtonColor = false,
+    })
+    upval_2(r4_39)
+    upval_3(r4_39)
+    local r9_39 = UDim2.new(1, -30, 1, 0)
+    r9_39 = UDim2.new(0, 10, 0, 0)
+    local r5_39 = upval_0("TextLabel", r4_39, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Button!!",
+      Size = r9_39,
+      Position = r9_39,
+      BackgroundTransparency = 1,
+      TextXAlignment = Enum.TextXAlignment.Left,
+      Font = upval_1.Text_Font,
+    })
+    local r10_39 = UDim2.new(0, 20, 0, 20)
+    r10_39 = UDim2.new(1, -25, 0, 2)
+    local r6_39 = upval_0("ImageLabel", r4_39, {
+      Image = "rbxassetid://10709791437",
+      Size = r10_39,
+      Position = r10_39,
+      BackgroundTransparency = 1,
+      ImageColor3 = upval_1.Cor_Text,
+    })
+    local r9_39 = function()
+      -- line: [0, 0] id: 40
+      upval_0()
+      local r3_40 = Color3.fromRGB(255, 0, 0)
+      upval_1(upval_2, "ImageColor3", r3_40, 0.2, true)
+      upval_1(upval_2, "ImageColor3", upval_3.Cor_Stroke, 0.2, false)
+      return
+    end
+    r4_39.MouseButton1Click:Connect(r9_39)
+    upval_5(r5_39)
+    return
+  end
+  AddNewButton = r29_18
+  local r29_18 = function(r0_86, r1_86)
+    -- line: [0, 0] id: 86
+    if r1_86.Name then
+    end
+    if r1_86.Callback then
+      local r3_86 = function()
+        -- line: [0, 0] id: 88
+        return
+      end
+    end
+    local r8_86 = UDim2.new(1, 0, 0, 25)
+    local r4_86 = upval_0("TextButton", r0_86, {
+      Size = r8_86,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      Text = "",
+      AutoButtonColor = false,
+    })
+    upval_2(r4_86)
+    upval_3(r4_86)
+    local r9_86 = UDim2.new(1, -30, 1, 0)
+    r9_86 = UDim2.new(0, 10, 0, 0)
+    local r5_86 = upval_0("TextLabel", r4_86, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Button!!",
+      Size = r9_86,
+      Position = r9_86,
+      BackgroundTransparency = 1,
+      TextXAlignment = Enum.TextXAlignment.Left,
+      Font = upval_1.Text_Font,
+    })
+    local r10_86 = UDim2.new(0, 20, 0, 20)
+    r10_86 = UDim2.new(1, -25, 0, 2)
+    local r6_86 = upval_0("ImageLabel", r4_86, {
+      Image = "rbxassetid://3944703587",
+      Size = r10_86,
+      Position = r10_86,
+      BackgroundTransparency = 1,
+      ImageColor3 = upval_1.Cor_Text,
+    })
+    local r9_86 = function()
+      -- line: [0, 0] id: 87
+      upval_0()
+      local r3_87 = Color3.fromRGB(255, 0, 0)
+      upval_1(upval_2, "ImageColor3", r3_87, 0.2, true)
+      upval_1(upval_2, "ImageColor3", upval_3.Cor_Stroke, 0.2, false)
+      return
+    end
+    r4_86.MouseButton1Click:Connect(r9_86)
+    upval_5(r5_86)
+    return
+  end
+  AddOrionButton = r29_18
+  local r29_18 = function(r0_25, r1_25)
+    -- line: [0, 0] id: 25
+    if r1_25.Name then
+    end
+    if r1_25.Default then
+    end
+    if r1_25.Callback then
+      local r4_25 = function()
+        -- line: [0, 0] id: 27
+        return
+      end
+    end
+    local r9_25 = UDim2.new(1, 0, 0, 25)
+    local r5_25 = upval_0("TextButton", r0_25, {
+      Size = r9_25,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      Text = "",
+      AutoButtonColor = false,
+    })
+    upval_2(r5_25)
+    upval_3(r5_25)
+    local r10_25 = UDim2.new(1, -40, 1, 0)
+    r10_25 = UDim2.new(0, 10, 0, 0)
+    local r6_25 = upval_0("TextLabel", r5_25, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Toggle!!",
+      Size = r10_25,
+      Position = r10_25,
+      BackgroundTransparency = 1,
+      TextXAlignment = Enum.TextXAlignment.Left,
+      Font = upval_1.Text_Font,
+    })
+    local r11_25 = UDim2.new(0, 25, 0, 15)
+    r11_25 = UDim2.new(1, -30, 0.5, 0)
+    r11_25 = Vector2.new(0, 0.5)
+    local r7_25 = upval_0("Frame", r5_25, {
+      Size = r11_25,
+      Position = r11_25,
+      AnchorPoint = r11_25,
+      BackgroundTransparency = 1,
+    })
+    r11_25 = UDim.new(1, 0)
+    upval_2(r7_25, {CornerRadius = r11_25})
+    local r8_25 = upval_3(r7_25, {Thickness = 2})
+    local r13_25 = UDim2.new(0, 13, 0, 13)
+    r13_25 = UDim2.new(0, 2, 0.5, 0)
+    r13_25 = Vector2.new(0, 0.5)
+    r9_25 = upval_0("Frame", r7_25, {
+      Size = r13_25,
+      Position = r13_25,
+      AnchorPoint = r13_25,
+      BackgroundColor3 = upval_1.Cor_Stroke,
+    })
+    r13_25 = UDim.new(1, 0)
+    upval_2(r9_25, {CornerRadius = r13_25})
+    if not false then
+      local r14_25 = UDim2.new(0, 10, 0.5, 0)
+      upval_4(r9_25, "Position", r14_25, 0.2, false)
+      r14_25 = Color3.fromRGB(255, 0, 0)
+      upval_4(r9_25, "BackgroundColor3", r14_25, 0.2, false)
+      r14_25 = Color3.fromRGB(255, 0, 0)
+      upval_4(r8_25, "Color", r14_25, 0.2, false)
+      r14_25 = Color3.fromRGB(255, 0, 0)
+      upval_4(r6_25, "TextColor3", r14_25, 0.2, false)
+    end
+    r4_25(true)
+    local r13_25 = function()
+      -- line: [0, 0] id: 26
+      if upval_0.Position.X.Offset < 5 then
+        upval_1 = true
+        local r3_26 = UDim2.new(0, 10, 0.5, 0)
+        upval_2(upval_0, "Position", r3_26, 0.2, false)
+        r3_26 = Color3.fromRGB(255, 0, 0)
+        upval_2(upval_0, "BackgroundColor3", r3_26, 0.2, false)
+        r3_26 = Color3.fromRGB(255, 0, 0)
+        upval_2(upval_3, "Color", r3_26, 0.2, false)
+        r3_26 = Color3.fromRGB(255, 0, 0)
+        upval_2(upval_4, "TextColor3", r3_26, 0.2, false)
+        upval_5(true)
+      end
+      upval_1 = false
+      r3_26 = UDim2.new(0, 2, 0.5, 0)
+      upval_2(upval_0, "Position", r3_26, 0.2, false)
+      upval_2(upval_0, "BackgroundColor3", upval_6.Cor_Stroke, 0.2, false)
+      upval_2(upval_3, "Color", upval_6.Cor_Stroke, 0.2, false)
+      upval_2(upval_4, "TextColor3", upval_6.Cor_Text, 0.2, false)
+      upval_5(false)
+      return
+    end
+    r5_25.MouseButton1Click:Connect(r13_25)
+    return r11_25
+  end
+  AddToggle = r29_18
+  local r29_18 = function(r0_45)
+    -- line: [0, 0] id: 45
+    if r0_45.Name then
+    end
+    if r0_45.Default then
+    end
+    if r0_45.Callback then
+      local r3_45 = function()
+        -- line: [0, 0] id: 46
+        return
+      end
+    end
+    if r0_45.Visible then
+    end
+    local r9_45 = UDim2.new(0, 100, 0, 60)
+    r9_45 = UDim2.new(0.8, 0, 0.8, 0)
+    r9_45 = Vector2.new(0.5, 0.5)
+    local r5_45 = upval_0("Frame", upval_1, {
+      Size = r9_45,
+      Position = r9_45,
+      AnchorPoint = r9_45,
+      BackgroundColor3 = upval_2.Cor_Hub,
+      Draggable = true,
+      Active = true,
+      Visible = false,
+    })
+    upval_3(r5_45)
+    local r10_45 = UDim2.new(1, 0, 0, 20)
+    local r6_45 = upval_0("TextLabel", r5_45, {
+      Size = r10_45,
+      TextSize = 20,
+      Font = upval_2.Text_Font,
+      TextColor3 = upval_2.Cor_Text,
+      Text = "Atalho",
+      BackgroundTransparency = 1,
+    })
+    local r11_45 = UDim2.new(1, 0, 0, 40)
+    r11_45 = UDim2.new(0, 0, 0, 20)
+    local r7_45 = upval_0("TextButton", r5_45, {
+      Size = r11_45,
+      Position = r11_45,
+      BackgroundTransparency = 1,
+      Text = "",
+    })
+    local r12_45 = UDim2.new(0.5, 0, 0.5, 0)
+    r12_45 = Vector2.new(0.5, 0.5)
+    r12_45 = UDim2.new(1, -40, 1, -15)
+    local r8_45 = upval_0("Frame", r7_45, {
+      Position = r12_45,
+      AnchorPoint = r12_45,
+      Size = r12_45,
+      BackgroundTransparency = 1,
+    })
+    r12_45 = UDim.new(2, 0)
+    upval_3(r8_45, {CornerRadius = r12_45})
+    local r13_45 = UDim2.new(0, 5, 0.5, 0)
+    r13_45 = Vector2.new(0, 0.5)
+    r13_45 = UDim2.new(0, 17, 0, 17)
+    r9_45 = upval_0("Frame", r8_45, {
+      Position = r13_45,
+      AnchorPoint = r13_45,
+      Size = r13_45,
+      BackgroundTransparency = 1,
+    })
+    r13_45 = UDim.new(5, 0)
+    upval_3(r9_45, {CornerRadius = r13_45})
+    r13_45 = Color3.fromRGB(100, 100, 100)
+    r10_45 = upval_4(r8_45, {Color = r13_45, Thickness = 3})
+    local r14_45 = Color3.fromRGB(100, 100, 100)
+    r11_45 = upval_4(r9_45, {Color = r14_45, Thickness = 3})
+    r3_45(false)
+    local r15_45 = function()
+      -- line: [0, 0] id: 47
+      if upval_0 == false then
+        local r3_47 = UDim2.new(1, -22, 0.5, 0)
+        upval_1(upval_2, "Position", r3_47, 0.2, false)
+      end
+      r3_47 = UDim2.new(0, 5, 0.5, 0)
+      upval_1(upval_2, "Position", r3_47, 0.2, false)
+      upval_0 = not upval_0
+      upval_3(upval_0)
+      return
+    end
+    r7_45.MouseButton1Click:Connect(r15_45)
+    return r5_45
+  end
+  AddMobileToggle = r29_18
+  local r29_18 = function(r0_60)
+    -- line: [0, 0] id: 60
+    if r0_60.Name then
+    end
+    if r0_60.Default then
+    end
+    if r0_60.Callback then
+      local r3_60 = function()
+        -- line: [0, 0] id: 61
+        return
+      end
+    end
+    if r0_60.Visible then
+    end
+    local r9_60 = UDim2.new(0, 120, 0, 70)
+    r9_60 = UDim2.new(0.8, 0, 0.8, 0)
+    r9_60 = Vector2.new(0.5, 0.5)
+    local r5_60 = upval_0("Frame", upval_1, {
+      Size = r9_60,
+      Position = r9_60,
+      AnchorPoint = r9_60,
+      BackgroundColor3 = upval_2.Cor_Hub,
+      Draggable = true,
+      Active = true,
+      Visible = false,
+    })
+    upval_3(r5_60)
+    local r10_60 = UDim2.new(1, 0, 0, 20)
+    local r6_60 = upval_0("TextLabel", r5_60, {
+      Size = r10_60,
+      TextSize = 18,
+      Font = upval_2.Text_Font,
+      TextColor3 = upval_2.Cor_Text,
+      Text = "Atalho",
+      BackgroundTransparency = 1,
+      TextWrapped = true,
+    })
+    local r11_60 = UDim2.new(1, 0, 0, 40)
+    r11_60 = UDim2.new(0, 0, 0, 20)
+    local r7_60 = upval_0("TextButton", r5_60, {
+      Size = r11_60,
+      Position = r11_60,
+      BackgroundTransparency = 1,
+      Text = "",
+    })
+    local r12_60 = UDim2.new(0.5, 0, 0.5, 0)
+    r12_60 = Vector2.new(0.5, 0.5)
+    r12_60 = UDim2.new(1, -40, 1, -15)
+    local r8_60 = upval_0("Frame", r7_60, {
+      Position = r12_60,
+      AnchorPoint = r12_60,
+      Size = r12_60,
+      BackgroundTransparency = 1,
+    })
+    r12_60 = UDim.new(2, 0)
+    upval_3(r8_60, {CornerRadius = r12_60})
+    local r13_60 = UDim2.new(0, 5, 0.5, 0)
+    r13_60 = Vector2.new(0, 0.5)
+    r13_60 = UDim2.new(0, 17, 0, 17)
+    r9_60 = upval_0("Frame", r8_60, {
+      Position = r13_60,
+      AnchorPoint = r13_60,
+      Size = r13_60,
+      BackgroundTransparency = 1,
+    })
+    r13_60 = UDim.new(5, 0)
+    upval_3(r9_60, {CornerRadius = r13_60})
+    r13_60 = Color3.fromRGB(100, 100, 100)
+    r10_60 = upval_4(r8_60, {Color = r13_60, Thickness = 3})
+    local r14_60 = Color3.fromRGB(100, 100, 100)
+    r11_60 = upval_4(r9_60, {Color = r14_60, Thickness = 3})
+    r3_60(false)
+    local r15_60 = function()
+      -- line: [0, 0] id: 62
+      if upval_0 == false then
+        local r3_62 = UDim2.new(1, -22, 0.5, 0)
+        upval_1(upval_2, "Position", r3_62, 0.2, false)
+      end
+      r3_62 = UDim2.new(0, 5, 0.5, 0)
+      upval_1(upval_2, "Position", r3_62, 0.2, false)
+      upval_0 = not upval_0
+      upval_3(upval_0)
+      return
+    end
+    r7_60.MouseButton1Click:Connect(r15_60)
+    return r5_60
+  end
+  AddBigMobileToggle = r29_18
+  local r29_18 = function(r0_73, r1_73)
+    -- line: [0, 0] id: 73
+    if not r1_73 then
+      r0_73[4](true)
+      local r9_73 = UDim2.new(0, 10, 0.5, 0)
+      upval_0(r0_73[1], "Position", r9_73, 0.2, false)
+      r9_73 = Color3.fromRGB(255, 0, 0)
+      upval_0(r0_73[1], "BackgroundColor3", r9_73, 0.2, false)
+      r9_73 = Color3.fromRGB(255, 0, 0)
+      upval_0(r0_73[2], "Color", r9_73, 0.2, false)
+      r9_73 = Color3.fromRGB(255, 0, 0)
+      upval_0(TextLabel, "TextColor3", r9_73, 0.2, false)
+    end
+    r0_73[4](false)
+    r9_73 = UDim2.new(0, 2, 0.5, 0)
+    upval_0(r0_73[1], "Position", r9_73, 0.2, false)
+    upval_0(r0_73[1], "BackgroundColor3", upval_1.Cor_Stroke, 0.2, false)
+    upval_0(r0_73[2], "Color", upval_1.Cor_Stroke, 0.2, false)
+    upval_0(TextLabel, "TextColor3", upval_1.Cor_Text, 0.2, false)
+    return
+  end
+  UpdateToggle = r29_18
+  local r29_18 = function(r0_92, r1_92)
+    -- line: [0, 0] id: 92
+    if r1_92.Name then
+    end
+    if r1_92.Increase then
+    end
+    if r1_92.MinValue / 1 then
+    end
+    if r1_92.MaxValue / 1 then
+    end
+    if r1_92.Default then
+    end
+    if r1_92.Callback then
+      local r7_92 = function()
+        -- line: [0, 0] id: 97
+        return
+      end
+    end
+    local r12_92 = UDim2.new(1, 0, 0, 25)
+    local r8_92 = upval_0("TextButton", r0_92, {
+      Size = r12_92,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      Text = 0,
+    })
+    upval_2(r8_92)
+    upval_3(r8_92)
+    local r13_92 = UDim2.new(1, 0, 1, 0)
+    r13_92 = UDim2.new(0, 150, 0, 0)
+    local r9_92 = upval_0("TextButton", r8_92, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Slider!!",
+      Size = r13_92,
+      Position = r13_92,
+      BackgroundTransparency = 1,
+      TextXAlignment = "Left",
+      Font = upval_1.Text_Font,
+    })
+    upval_4(r9_92)
+    local r14_92 = UDim2.new(0, 20, 0, 20)
+    r14_92 = UDim2.new(0, 5, 0, 2.5)
+    local r10_92 = upval_0("TextLabel", r8_92, {
+      Font = upval_1.Text_Font,
+      Size = r14_92,
+      Text = "...",
+      Position = r14_92,
+      TextScaled = true,
+      TextColor3 = upval_1.Cor_Text,
+      BackgroundTransparency = 1,
+    })
+    local r15_92 = UDim2.new(0, 100, 0, 7.5)
+    r15_92 = UDim2.new(0, 35, 0.5, 0)
+    r15_92 = Vector2.new(0, 0.5)
+    local r11_92 = upval_0("TextLabel", r8_92, {
+      Size = r15_92,
+      Position = r15_92,
+      AnchorPoint = r15_92,
+      BackgroundColor3 = upval_1.Cor_Stroke,
+      Text = "",
+    })
+    upval_2(r11_92)
+    local r16_92 = UDim2.new(0, 1, 0, 0)
+    r12_92 = upval_0("Frame", r11_92, {Size = r16_92, Visible = false})
+    local r17_92 = UDim2.new(0, 7.5, 0, 15)
+    r17_92 = UDim2.new(0, 0, 0.5, 0)
+    r17_92 = Vector2.new(0, 0.5)
+    r13_92 = upval_0("Frame", r11_92, {
+      BackgroundColor3 = upval_1.Cor_Text,
+      Size = r17_92,
+      Position = r17_92,
+      AnchorPoint = r17_92,
+      Active = true,
+      Draggable = true,
+    })
+    upval_2(r13_92)
+    local r18_92 = Color3.fromRGB(255, 0, 0)
+    r18_92 = UDim2.new(0, r13_92.Position.X.Offset, 1, 0)
+    r14_92 = upval_0("Frame", r11_92, {BackgroundColor3 = r18_92, Size = r18_92})
+    upval_2(r14_92)
+    local r15_92 = function(r0_93)
+      -- line: [0, 0] id: 93
+      local r1_93 = tostring(r0_93 * upval_0)
+      local r2_93 = string.find(r1_93, ".")
+      if not r2_93 then
+        r2_93 = r1_93:sub(1, 5)
+      end
+      upval_1.Text = r2_93
+      upval_2(r0_93 * upval_0)
+      return
+    end
+    local r19_92 = function()
+      -- line: [0, 0] id: 95
+      upval_0 = true
+      if not upval_0 then
+        task.wait()
+        local r0_95 = upval_1:GetMouseLocation()
+        local r2_95 = UDim2.new(0, r0_95.X - upval_2.AbsolutePosition.X, 0.5, 0)
+        upval_3.Position = r2_95
+      end
+      return
+    end
+    r8_92.MouseButton1Down:Connect(r19_92)
+    local r19_92 = function()
+      -- line: [0, 0] id: 96
+      upval_0 = false
+      return
+    end
+    r8_92.MouseLeave:Connect(r19_92)
+    local r17_92 = function(r0_94)
+      -- line: [0, 0] id: 94
+      local r5_94 = UDim2.new(0, r0_94 - upval_2 * upval_1 / upval_0 * upval_1 - upval_2 * upval_1 * 100 + 1, 0, 0)
+      upval_3(upval_4, "Position", r5_94, 0.5, false)
+      return
+    end
+    r17_92(25)
+    local r20_92 = function(r0_98)
+      -- line: [0, 0] id: 98
+      if r0_98 == "Position" then
+        local r4_98 = math.clamp(upval_0.Position.X.Offset, 0, 100)
+        local r2_98 = UDim2.new(0, r4_98, 0.5, 0)
+        upval_0.Position = r2_98
+        r2_98 = UDim2.new(0, upval_0.Position.X.Offset, 1, 0)
+        upval_1.Size = r2_98
+        r2_98 = math.floor(upval_0.Position.X.Offset / 100 * upval_2 / upval_2 * upval_2 - upval_3 + upval_3)
+        upval_4(r2_98)
+      end
+      return
+    end
+    r13_92.Changed:Connect(r20_92)
+    return r18_92
+  end
+  AddSlider = r29_18
+  local r29_18 = function(r0_77, r1_77)
+    -- line: [0, 0] id: 77
+    local r8_77 = UDim2.new(0, r1_77 - r0_77[4] * r0_77[2] / r0_77[3] * r0_77[2] - r0_77[4] * r0_77[2] * 100 + 1, 0, 0)
+    upval_0(r0_77[1], "Position", r8_77, 0.5, false)
+    return
+  end
+  UpdateSlider = r29_18
+  local r29_18 = function(r0_78, r1_78)
+    -- line: [0, 0] id: 78
+    if r1_78.Name then
+    end
+    if r1_78.KeyCode then
+    end
+    if r1_78.Default then
+    end
+    if r1_78.Callback then
+      local r5_78 = function()
+        -- line: [0, 0] id: 79
+        return
+      end
+    end
+    local r10_78 = UDim2.new(1, 0, 0, 25)
+    local r6_78 = upval_0("Frame", r0_78, {Size = r10_78, BackgroundColor3 = upval_1.Cor_Options, Name = "Frame"})
+    upval_2(r6_78)
+    upval_3(r6_78)
+    local r11_78 = UDim2.new(1, 0, 1, 0)
+    r11_78 = UDim2.new(0, 35, 0, 0)
+    local r7_78 = upval_0("TextButton", r6_78, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Slider!!",
+      Size = r11_78,
+      Position = r11_78,
+      BackgroundTransparency = 1,
+      TextXAlignment = "Left",
+      Font = upval_1.Text_Font,
+    })
+    local r12_78 = UDim2.new(0, 18, 0, 18)
+    r12_78 = UDim2.new(0, 5, 0, 3.5)
+    local r8_78 = upval_0("TextLabel", r6_78, {
+      Font = upval_1.Text_Font,
+      Size = r12_78,
+      Text = "E",
+      Position = r12_78,
+      TextScaled = true,
+      TextColor3 = upval_1.Cor_Text,
+      BackgroundTransparency = 1,
+    })
+    upval_2(r8_78)
+    upval_3(r8_78)
+    local r12_78 = function(r0_80)
+      -- line: [0, 0] id: 80
+      if r0_80.KeyCode == Enum.KeyCode[upval_0] then
+        upval_1 = not upval_1
+        upval_2(upval_1)
+      end
+      return
+    end
+    upval_4.InputBegan:Connect(r12_78)
+    upval_5(r7_78)
+    return
+  end
+  AddKeybind = r29_18
+  local r29_18 = function(r0_53, r1_53)
+    -- line: [0, 0] id: 53
+    if r1_53.Name then
+    end
+    if r1_53.Default then
+    end
+    if r1_53.PlaceholderText then
+    end
+    if r1_53.ClearText then
+    end
+    if r1_53.Callback then
+      local r6_53 = function()
+        -- line: [0, 0] id: 54
+        return
+      end
+    end
+    local r11_53 = UDim2.new(1, 0, 0, 25)
+    local r7_53 = upval_0("Frame", r0_53, {Size = r11_53, BackgroundColor3 = upval_1.Cor_Options, Name = "Frame"})
+    upval_2(r7_53)
+    upval_3(r7_53)
+    local r12_53 = UDim2.new(1, 0, 1, 0)
+    r12_53 = UDim2.new(0, 150, 0, 0)
+    local r8_53 = upval_0("TextButton", r7_53, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "TextBox!!",
+      Size = r12_53,
+      Position = r12_53,
+      BackgroundTransparency = 1,
+      TextXAlignment = "Left",
+      Font = upval_1.Text_Font,
+    })
+    upval_4(r8_53)
+    local r13_53 = UDim2.new(0, 120, 0, 20)
+    r13_53 = UDim2.new(0, 15, 0, 2.5)
+    local r9_53 = upval_0("TextBox", r7_53, {
+      Size = r13_53,
+      Position = r13_53,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "TextBox",
+      ClearTextOnFocus = false,
+      PlaceholderText = "TextBox",
+      TextScaled = true,
+      Font = upval_1.Text_Font,
+      BackgroundTransparency = 1,
+    })
+    local r14_53 = UDim2.new(1, 0, 0, 1)
+    r14_53 = UDim2.new(0.5, 0, 1, 0)
+    r14_53 = Vector2.new(0.5, 0.5)
+    local r10_53 = upval_0("Frame", r9_53, {
+      Size = r14_53,
+      Position = r14_53,
+      AnchorPoint = r14_53,
+      BackgroundColor3 = upval_1.Cor_Stroke,
+      BorderSizePixel = 0,
+    })
+    local r13_53 = function()
+      -- line: [0, 0] id: 55
+      local r3_55 = UDim2.new(0, 0, 0, 1)
+      upval_0(upval_1, "Size", r3_55, 0.3, true)
+      r3_55 = UDim2.new(1, 0, 0, 1)
+      upval_0(upval_1, "Size", r3_55, 0.3, true)
+      return
+    end
+    r9_53.MouseEnter:Connect(r13_53)
+    local r13_53 = function()
+      -- line: [0, 0] id: 56
+      upval_0(upval_1.Text)
+      return
+    end
+    r9_53.FocusLost:Connect(r13_53)
+    return
+  end
+  AddTextBox = r29_18
+  local r29_18 = function(r0_29, r1_29)
+    -- line: [0, 0] id: 29
+    if r1_29.Name then
+    end
+    if r1_29.Default then
+      local r3_29 = Color3.fromRGB(255, 0, 0)
+    end
+    if r1_29.Callback then
+      local r4_29 = function()
+        -- line: [0, 0] id: 30
+        return
+      end
+    end
+    r4_29(r3_29)
+    local r12_29 = UDim2.new(1, 0, 0, 25)
+    local r8_29 = upval_0("Frame", r0_29, {Size = r12_29, BackgroundColor3 = upval_1.Cor_Options})
+    upval_2(r8_29)
+    upval_3(r8_29)
+    local r13_29 = UDim2.new(1, 0, 0, 25)
+    local r9_29 = upval_0("TextButton", r8_29, {
+      Size = r13_29,
+      BackgroundTransparency = 1,
+      AutoButtonColor = false,
+      Text = "",
+    })
+    local r14_29 = UDim2.new(1, -10, 0, 25)
+    r14_29 = UDim2.new(0, 35, 0, 0)
+    local r10_29 = upval_0("TextLabel", r8_29, {
+      Size = r14_29,
+      Position = r14_29,
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      TextXAlignment = "Left",
+      Text = "Color Picker",
+      Font = upval_1.Text_Font,
+      BackgroundTransparency = 1,
+    })
+    local r15_29 = UDim2.new(0, 20, 0, 20)
+    r15_29 = UDim2.new(0, 5, 0, 2.5)
+    local r11_29 = upval_0("Frame", r8_29, {Size = r15_29, Position = r15_29, BackgroundColor3 = r3_29})
+    upval_3(r11_29)
+    upval_2(r11_29)
+    local r16_29 = UDim2.new(1)
+    r16_29 = UDim2.new(0)
+    r12_29 = upval_0("ImageButton", r8_29, {
+      Size = r16_29,
+      Position = r16_29,
+      Visible = false,
+      Image = "rbxassetid://4155801252",
+    })
+    upval_3(r12_29)
+    upval_2(r12_29)
+    r13_29 = upval_0("Frame", r12_29, {Visible = false})
+    local r18_29 = UDim2.new(0)
+    r18_29 = UDim2.new(1)
+    r18_29 = Vector2.new(1, 0)
+    r14_29 = upval_0("TextButton", r8_29, {
+      Size = r18_29,
+      Position = r18_29,
+      AnchorPoint = r18_29,
+      Visible = false,
+      Text = "",
+    })
+    upval_3(r14_29)
+    upval_2(r14_29)
+    local r21_29 = ColorSequenceKeypoint.new(0)
+    local r22_29 = ColorSequenceKeypoint.new(0.2)
+    local r23_29 = ColorSequenceKeypoint.new(0.4)
+    local r24_29 = ColorSequenceKeypoint.new(0.6)
+    local r25_29 = ColorSequenceKeypoint.new(0.8)
+    local r26_29 = ColorSequenceKeypoint.new(0.9)
+    local r19_29 = ColorSequence.new({})
+    upval_0("UIGradient", r14_29, {Rotation = 90, Color = r19_29})
+    r19_29 = UDim2.new(1, 0, 0, 0)
+    r15_29 = upval_0("Frame", r14_29, {Visible = false, Size = r19_29})
+    local r20_29 = UDim2.new(1, 0, 0, 0)
+    r20_29 = UDim2.new(0, 0, 0, 30)
+    r16_29 = upval_0("Frame", r8_29, {Size = r20_29, Position = r20_29, Visible = false})
+    upval_2(r16_29)
+    r21_29 = UDim2.new(1, 0, 0, 10)
+    r21_29 = UDim2.new(0)
+    local r17_29 = upval_0("Frame", r14_29, {
+      Size = r21_29,
+      Position = r21_29,
+      BackgroundTransparency = 1,
+      Active = true,
+      Draggable = true,
+    })
+    r21_29 = UDim.new(2, 0)
+    upval_3(r17_29, {CornerRadius = r21_29})
+    r21_29 = Color3.fromRGB(255, 255, 255)
+    upval_2(r17_29, {Color = r21_29})
+    r22_29 = UDim2.new(0, 15, 0, 15)
+    r24_29 = select(2)
+    r22_29 = UDim2.new(0)
+    r18_29 = upval_0("Frame", r12_29, {
+      Size = r22_29,
+      Position = r22_29,
+      BackgroundTransparency = 1,
+      Active = true,
+      Draggable = true,
+    })
+    r22_29 = UDim.new(2, 0)
+    upval_3(r18_29, {CornerRadius = r22_29})
+    r22_29 = Color3.fromRGB(255, 255, 255)
+    upval_2(r18_29, {Color = r22_29})
+    local r21_29 = function()
+      -- line: [0, 0] id: 36
+      local r0_36 = upval_0:GetMouseLocation()
+      local r9_36 = tonumber(r0_36.Y - upval_1.AbsolutePosition.Y)
+      local r5_36 = UDim2.new(0, r0_36.X - upval_1.AbsolutePosition.X, 0, r9_36 - 35)
+      upval_2(upval_3, "Position", r5_36, 0.3, false)
+      return
+    end
+    r12_29.MouseButton1Click:Connect(r21_29)
+    local r21_29 = function()
+      -- line: [0, 0] id: 33
+      local r0_33 = upval_0:GetMouseLocation()
+      local r5_33 = UDim2.new(0, 0, 0, r0_33.Y - 35 - upval_1.AbsolutePosition.Y)
+      upval_2(upval_3, "Position", r5_33, 0.3, false)
+      return
+    end
+    r14_29.MouseButton1Click:Connect(r21_29)
+    local r19_29 = function()
+      -- line: [0, 0] id: 35
+      upval_0(Color3.fromHSV(upval_1, upval_2, upval_3))
+      return
+    end
+    local r20_29 = function()
+      -- line: [0, 0] id: 37
+      local r0_37 = tonumber(upval_1.Position.Y.Offset)
+      upval_0 = r0_37 / 80
+      r0_37 = tonumber(215 - upval_3.Position.X.Offset)
+      upval_2 = r0_37 / 215
+      r0_37 = tonumber(75 - upval_3.Position.Y.Offset)
+      upval_4 = r0_37 / 75
+      local r1_37 = Color3.fromHSV(upval_0, 1, 1)
+      upval_5.ImageColor3 = r1_37
+      r1_37 = Color3.fromHSV(upval_0, upval_2, upval_4)
+      upval_6.BackgroundColor3 = r1_37
+      upval_7()
+      return
+    end
+    r20_29()
+    local r23_29 = function(r0_34)
+      -- line: [0, 0] id: 34
+      if r0_34 == "Position" then
+        local r2_34 = UDim2.new(0)
+        upval_0.Position = r2_34
+        upval_1()
+      end
+      return
+    end
+    r17_29.Changed:Connect(r23_29)
+    local r23_29 = function(r0_31)
+      -- line: [0, 0] id: 31
+      if r0_31 == "Position" then
+        local r4_31 = math.clamp(upval_0.Position.X.Offset, 0, 222)
+        local r2_31 = UDim2.new(0)
+        upval_0.Position = r2_31
+        upval_1()
+      end
+      return
+    end
+    r18_29.Changed:Connect(r23_29)
+    local r23_29 = function(r0_38)
+      -- line: [0, 0] id: 38
+      if r0_38 == "Size" then
+        if 60 <= upval_0.Size.Y.Offset then
+          local r2_38 = UDim2.new(0, 5, 0, 5)
+          upval_1.Position = r2_38
+          upval_2.Visible = true
+          upval_3.Visible = true
+          upval_4.Visible = true
+        end
+        r2_38 = UDim2.new(0, 5, 0, 2.5)
+        upval_1.Position = r2_38
+        upval_2.Visible = false
+        upval_3.Visible = false
+        upval_4.Visible = false
+      end
+      return
+    end
+    r8_29.Changed:Connect(r23_29)
+    local r24_29 = function()
+      -- line: [0, 0] id: 32
+      upval_0 = not upval_0
+      if upval_0 == true then
+        local r3_32 = upval_1:Create(Enum.EasingStyle.Linear)
+        local r5_32 = UDim2.new(1, 0, 0, 140)
+        local r0_32 = upval_1:Create(upval_1, upval_2, r3_32, {Size = r5_32})
+        r0_32:play()
+        r0_32.Completed:Wait()
+      end
+      r3_32 = upval_1:Create(Enum.EasingStyle.Linear)
+      r5_32 = UDim2.new(1, 0, 0, 25)
+      r0_32 = upval_1:Create(upval_1, upval_2, r3_32, {Size = r5_32})
+      r0_32:play()
+      r0_32.Completed:Wait()
+      return
+    end
+    r9_29.MouseButton1Click:Connect(r24_29)
+    return
+  end
+  AddColorPicker = r29_18
+  local r29_18 = function(r0_81, r1_81)
+    -- line: [0, 0] id: 81
+    if r1_81.Name then
+    end
+    if r1_81.Default then
+    end
+    if r1_81.Options then
+    end
+    if r1_81.Default then
+    end
+    if r1_81.Callback then
+      local r6_81 = function()
+        -- line: [0, 0] id: 82
+        return
+      end
+    end
+    local r11_81 = UDim2.new(1, 0, 0, 25)
+    local r7_81 = upval_0("TextButton", r0_81, {
+      Size = r11_81,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      Text = "",
+      AutoButtonColor = false,
+    })
+    upval_2(Frame)
+    upval_3(Frame)
+    local r12_81 = UDim2.new(1, 0, 0, 25)
+    r12_81 = UDim2.new(0, 35, 0, 0)
+    local r8_81 = upval_0("TextLabel", r7_81, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Dropdown!!",
+      Size = r12_81,
+      Position = r12_81,
+      BackgroundTransparency = 1,
+      TextXAlignment = "Left",
+      Font = upval_1.Text_Font,
+    })
+    upval_4(r8_81)
+    local r13_81 = UDim2.new(1, 0, 0, 1)
+    r13_81 = UDim2.new(0, 0, 0, 25)
+    local r9_81 = upval_0("Frame", r7_81, {
+      Size = r13_81,
+      Position = r13_81,
+      BorderSizePixel = 0,
+      BackgroundColor3 = upval_1.Cor_Stroke,
+      Visible = false,
+    })
+    local r14_81 = UDim2.new(0, 25, 0, 25)
+    r14_81 = UDim2.new(0, 5, 0, 0)
+    local r10_81 = upval_0("ImageLabel", r7_81, {
+      Image = "rbxassetid://6031090990",
+      Size = r14_81,
+      Position = r14_81,
+      BackgroundTransparency = 1,
+    })
+    local r15_81 = UDim2.new(1, -20, 0, 2.5)
+    r15_81 = Vector2.new(1, 0)
+    r15_81 = UDim2.new(0, 100, 0, 20)
+    r11_81 = upval_0("TextLabel", r7_81, {
+      BackgroundColor3 = upval_1.Cor_Hub,
+      BackgroundTransparency = 0.1,
+      Position = r15_81,
+      AnchorPoint = r15_81,
+      Size = r15_81,
+      TextColor3 = upval_1.Cor_DarkText,
+      TextScaled = true,
+      Font = upval_1.Text_Font,
+      Text = "...",
+    })
+    upval_2(r11_81)
+    upval_3(r11_81)
+    local r16_81 = UDim2.new(1, 0, 1, -25)
+    r16_81 = UDim2.new(0, 0, 0, 25)
+    r16_81 = UDim2.new()
+    r12_81 = upval_0("ScrollingFrame", r7_81, {
+      Size = r16_81,
+      Position = r16_81,
+      CanvasSize = r16_81,
+      ScrollingDirection = "Y",
+      AutomaticCanvasSize = "Y",
+      BackgroundTransparency = 1,
+      ScrollBarThickness = 2,
+    })
+    local r17_81 = UDim.new(0, 10)
+    r17_81 = UDim.new(0, 10)
+    r17_81 = UDim.new(0, 10)
+    r17_81 = UDim.new(0, 10)
+    upval_0("UIPadding", r12_81, {
+      PaddingLeft = r17_81,
+      PaddingRight = r17_81,
+      PaddingTop = r17_81,
+      PaddingBottom = r17_81,
+    })
+    r17_81 = UDim.new(0, 5)
+    upval_0("UIListLayout", r12_81, {Padding = r17_81})
+    local r13_81 = function(r0_84)
+      -- line: [0, 0] id: 84
+      local r5_84 = UDim2.new(1, 0, 0, 15)
+      r5_84 = Color3.fromRGB(180, 180, 180)
+      local r1_84 = upval_0("TextButton", upval_1, {
+        Size = r5_84,
+        Text = r0_84,
+        Font = upval_2.Text_Font,
+        TextSize = 12,
+        TextColor3 = r5_84,
+        BackgroundTransparency = 1,
+      })
+      upval_3(r1_84)
+      if r0_84 == upval_4 then
+        r1_84.BackgroundTransparency = 0.8
+        r1_84.TextColor3 = upval_2.Cor_Text
+        upval_5.Text = r0_84
+        upval_6(r0_84)
+      end
+      local r6_84 = function()
+        -- line: [0, 0] id: 85
+        local r0_85, r1_85, r2_85 = pairs(upval_0:GetChildren())
+        local r5_85 = r4_85:IsA("TextButton")
+        if not r5_85 then
+          r4_85.BackgroundTransparency = 1
+          r5_85 = Color3.fromRGB(180, 180, 180)
+          r4_85.TextColor3 = r5_85
+        end
+        for r3_85, r4_85 in r0_85 do
+          upval_1.Text = upval_2
+          upval_3(upval_2)
+          upval_4.BackgroundTransparency = 0.8
+          upval_4.TextColor3 = upval_5.Cor_Text
+          return
+      end
+      r1_84.MouseButton1Click:Connect(r6_84)
+      return
+    end
+    local r14_81, r15_81, r16_81 = pairs(r4_81)
+    r13_81(0)
+    for r17_81, r18_81 in r14_81 do
+      local r17_81 = function()
+        -- line: [0, 0] id: 83
+        local r2_83, r3_83, r4_83 = pairs(upval_0:GetChildren())
+        local r7_83 = r6_83:IsA("TextButton")
+        if not r7_83 then
+          if 0 < 5 then
+            r7_83 = tonumber(r6_83.Size.Y.Offset + 10)
+          end
+        end
+        for r5_83, r6_83 in r2_83 do
+          if upval_1 then
+            r5_83 = UDim2.new(1, 0, 0, 25 + r7_83)
+            upval_2(upval_3, "Size", r5_83, 0.3, false)
+            upval_2(upval_4, "Rotation", 180, 0.3, false)
+            upval_1 = true
+            upval_5.Visible = true
+          end
+          r5_83 = UDim2.new(1, 0, 0, 25)
+          upval_2(upval_3, "Size", r5_83, 0.3, false)
+          upval_2(upval_4, "Rotation", 0, 0.3, true)
+          upval_1 = false
+          upval_5.Visible = false
+          return
+      end
+      r7_81.MouseButton1Click:Connect(r17_81)
+      return r15_81
+  end
+  AddDropdown = r29_18
+  local r29_18 = function(r0_20, r1_20)
+    -- line: [0, 0] id: 20
+    local r6_20, r7_20, r8_20 = pairs(r0_20[1]:GetChildren())
+    local r11_20 = r10_20:IsA("TextButton")
+    if not r11_20 then
+      r10_20:Destroy()
+    end
+    for r9_20, r10_20 in r6_20 do
+      local r6_20 = function(r0_21)
+        -- line: [0, 0] id: 21
+        local r5_21 = UDim2.new(1, 0, 0, 15)
+        r5_21 = Color3.fromRGB(180, 180, 180)
+        local r1_21 = upval_0("TextButton", upval_1, {
+          Size = r5_21,
+          Text = r0_21,
+          Font = upval_2.Text_Font,
+          TextSize = 12,
+          TextColor3 = r5_21,
+          BackgroundTransparency = 1,
+        })
+        upval_3(r1_21)
+        if r0_21 == upval_4 then
+          r1_21.BackgroundTransparency = 0.8
+          r1_21.TextColor3 = upval_2.Cor_Text
+          upval_5.Text = r0_21
+          upval_6(r0_21)
+        end
+        upval_5.Text = "..."
+        local r6_21 = function()
+          -- line: [0, 0] id: 22
+          local r0_22, r1_22, r2_22 = pairs(upval_0:GetChildren())
+          local r5_22 = r4_22:IsA("TextButton")
+          if not r5_22 then
+            r4_22.BackgroundTransparency = 1
+            r5_22 = Color3.fromRGB(180, 180, 180)
+            r4_22.TextColor3 = r5_22
+          end
+          for r3_22, r4_22 in r0_22 do
+            upval_1.Text = upval_2
+            upval_3(upval_2)
+            upval_4.BackgroundTransparency = 0.8
+            upval_4.TextColor3 = upval_5.Cor_Text
+            return
+        end
+        r1_21.MouseButton1Click:Connect(r6_21)
+        return
+      end
+      local r7_20, r8_20, r9_20 = pairs(r1_20)
+      r6_20(r10_20:Destroy)
+      for r10_20, r11_20 in r7_20 do
+        return
+  end
+  UpdateDropdown = r29_18
+  local r29_18 = function(r0_28, r1_28)
+    -- line: [0, 0] id: 28
+    if r1_28[1] then
+      if r1_28.Name then
+      end
+    end
+    if r1_28[2] then
+      if r1_28.Image then
+      end
+    end
+    local r8_28 = UDim2.new(0, 95, 0, 110)
+    local r4_28 = upval_0("Frame", r0_28, {Size = r8_28, BackgroundColor3 = upval_1.Cor_Options, Name = "Frame"})
+    upval_2(r4_28)
+    upval_3(r4_28)
+    local r9_28 = UDim2.new(1, 0, 0, 25)
+    local r5_28 = upval_0("TextButton", r4_28, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "",
+      Size = r9_28,
+      BackgroundTransparency = 1,
+      Font = upval_1.Text_Font,
+    })
+    local r10_28 = UDim2.new(0, 75, 0, 75)
+    r10_28 = UDim2.new(0, 10, 0, 25)
+    local r6_28 = upval_0("ImageLabel", r4_28, {Image = "Image Label", Size = r10_28, Position = r10_28})
+    upval_4(r5_28)
+    return r6_28
+  end
+  AddImageLabel = r29_18
+  function SetImage(r0_99, r1_99)
+    -- line: [0, 0] id: 99
+    r0_99.Image = r1_99
+    return
+  end
+  local r29_18 = function(r0_44, r1_44)
+    -- line: [0, 0] id: 44
+    if r1_44[1] then
+      if r1_44.Title then
+      end
+    end
+    if r1_44[2] then
+      if r1_44.Text then
+      end
+    end
+    local r8_44 = UDim2.new(1, 0, 0, 25)
+    local r4_44 = upval_0("Frame", r0_44, {
+      Size = r8_44,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      AutomaticSize = Enum.AutomaticSize.Y,
+    })
+    upval_2(r4_44)
+    upval_3(r4_44)
+    upval_0("UIListLayout", r4_44, {SortOrder = Enum.SortOrder.LayoutOrder})
+    local r9_44 = UDim.new(0, 20)
+    r9_44 = UDim.new(0, 10)
+    r9_44 = UDim.new(0, 5)
+    r9_44 = UDim.new(0, 5)
+    upval_0("UIPadding", r4_44, {
+      PaddingLeft = r9_44,
+      PaddingRight = r9_44,
+      PaddingTop = r9_44,
+      PaddingBottom = r9_44,
+    })
+    r9_44 = UDim2.new(1, 0, 0, 0)
+    local r5_44 = upval_0("TextLabel", r4_44, {
+      Name = "Title",
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Paragraph!!",
+      Size = r9_44,
+      AutomaticSize = Enum.AutomaticSize.Y,
+      BackgroundTransparency = 1,
+      TextXAlignment = Enum.TextXAlignment.Left,
+      TextYAlignment = Enum.TextYAlignment.Top,
+      Font = upval_1.Text_Font,
+      TextWrapped = true,
+      LayoutOrder = 1,
+    })
+    local r10_44 = UDim2.new(1, 0, 0, 0)
+    local r6_44 = upval_0("TextLabel", r4_44, {
+      Name = "Content",
+      Size = r10_44,
+      AutomaticSize = Enum.AutomaticSize.Y,
+      BackgroundTransparency = 1,
+      TextXAlignment = Enum.TextXAlignment.Left,
+      TextYAlignment = Enum.TextYAlignment.Top,
+      TextColor3 = upval_1.Cor_DarkText,
+      TextSize = 10,
+      Text = "Paragraph!!",
+      Font = upval_1.Text_Font,
+      TextWrapped = true,
+      LayoutOrder = 2,
+    })
+    upval_4(r5_44)
+    return r7_44
+  end
+  AddParagraph = r29_18
+  local r29_18 = function(r0_72, r1_72)
+    -- line: [0, 0] id: 72
+    if r1_72[1] then
+      if r1_72.Name then
+      end
+    end
+    local r7_72 = UDim2.new(1, 0, 0, 25)
+    local r3_72 = upval_0("Frame", r0_72, {Size = r7_72, BackgroundColor3 = upval_1.Cor_Options, Name = "Frame"})
+    upval_2(r3_72)
+    upval_3(r3_72)
+    local r8_72 = UDim2.new(1, 0, 0, 25)
+    r8_72 = UDim2.new(0, 20, 0, 0)
+    local r4_72 = upval_0("TextButton", r3_72, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Text Label!!",
+      Size = r8_72,
+      Position = r8_72,
+      BackgroundTransparency = 1,
+      TextXAlignment = "Left",
+      Font = upval_1.Text_Font,
+    })
+    upval_4(r4_72)
+    return r4_72
+  end
+  AddTextLabel = r29_18
+  local r29_18 = function(r0_67, r1_67)
+    -- line: [0, 0] id: 67
+    if r1_67[1] then
+      if r1_67.Name then
+      end
+    end
+    local r7_67 = UDim2.new(1, 0, 0, 25)
+    local r3_67 = upval_0("Frame", r0_67, {Size = r7_67, BackgroundColor3 = upval_1.Cor_Options, Name = "Frame"})
+    upval_2(r3_67)
+    upval_3(r3_67)
+    local r8_67 = UDim2.new(1, -10, 1, 0)
+    r8_67 = UDim2.new(0, 10, 0, 0)
+    local r4_67 = upval_0("TextLabel", r3_67, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Text Label!!",
+      Size = r8_67,
+      Position = r8_67,
+      BackgroundTransparency = 1,
+      TextXAlignment = "Left",
+      Font = upval_1.Text_Font,
+    })
+    upval_4(r4_67)
+    local r6_67 = function(r0_68, r1_68)
+      -- line: [0, 0] id: 68
+      upval_0.Text = r1_68
+      return
+    end
+    return r5_67
+  end
+  AddOrionTextLabel = r29_18
+  local r29_18 = function(r0_66, r1_66)
+    -- line: [0, 0] id: 66
+    if r1_66[1] then
+      if r1_66.Name then
+      end
+    end
+    local r7_66 = UDim2.new(1, 0, 0, 25)
+    local r3_66 = upval_0("Frame", r0_66, {Size = r7_66, BackgroundColor3 = upval_1.Cor_Options, Name = "Frame"})
+    upval_2(r3_66)
+    upval_3(r3_66)
+    local r8_66 = UDim2.new(1, 0, 0, 25)
+    r8_66 = UDim2.new(0, 20, 0, 0)
+    local r4_66 = upval_0("TextButton", r3_66, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_Text,
+      Text = "Section!!",
+      Size = r8_66,
+      Position = r8_66,
+      BackgroundTransparency = 1,
+      TextXAlignment = "Left",
+      Font = upval_1.Text_Font,
+    })
+    upval_4(r4_66)
+    return r4_66
+  end
+  AddSectionLabel = r29_18
+  local r29_18 = function(r0_89, r1_89)
+    -- line: [0, 0] id: 89
+    if r1_89[1] then
+      if r1_89.Name then
+      end
+    end
+    local r7_89 = UDim2.new(1, 0, 0, 25)
+    local r3_89 = upval_0("Frame", r0_89, {
+      Size = r7_89,
+      BackgroundColor3 = upval_1.Cor_Hub,
+      Name = "Frame",
+      Transparency = 1,
+    })
+    upval_2(r3_89)
+    local r8_89 = UDim2.new(1, 0, 0, 25)
+    r8_89 = UDim2.new(0, 10, 0, 0)
+    local r4_89 = upval_0("TextButton", r3_89, {
+      TextSize = 12,
+      TextColor3 = upval_1.Cor_DarkText,
+      Text = "Section!!",
+      Size = r8_89,
+      Position = r8_89,
+      BackgroundTransparency = 1,
+      TextXAlignment = "Left",
+      Font = upval_1.Text_Font,
+    })
+    return r4_89
+  end
+  AddSection = r29_18
+  function SetSection(r0_64, r1_64)
+    -- line: [0, 0] id: 64
+    r0_64.Text = r1_64
+    return
+  end
+  local r29_18 = function(r0_57, r1_57)
+    -- line: [0, 0] id: 57
+    if r1_57[1] then
+      if r1_57.DiscordLink then
+      end
+    end
+    if r1_57[2] then
+      if r1_57.DiscordIcon then
+      end
+    end
+    if r1_57[3] then
+      if r1_57.DiscordTitle then
+      end
+    end
+    local r9_57 = UDim2.new(1, 0, 0, 110)
+    local r5_57 = upval_0("Frame", r0_57, {
+      Size = r9_57,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      AutomaticSize = "Y",
+    })
+    upval_2(r5_57)
+    upval_3(r5_57)
+    local r10_57 = UDim2.new(1, 0, 0, 25)
+    r10_57 = UDim2.new(0, 12, 0, 0)
+    r10_57 = Color3.fromRGB(255, 0, 0)
+    local r6_57 = upval_0("TextLabel", r5_57, {
+      Size = r10_57,
+      Text = "https://discord.gg/",
+      TextXAlignment = "Left",
+      BackgroundTransparency = 1,
+      Position = r10_57,
+      TextColor3 = r10_57,
+      Font = Enum.Font.GothamBold,
+      TextSize = 14,
+    })
+    local r11_57 = UDim2.new(1, 0, 0, 40)
+    r11_57 = UDim2.new(0, 60, 0, 25)
+    r11_57 = Color3.fromRGB(200, 200, 200)
+    local r7_57 = upval_0("TextLabel", r5_57, {
+      Size = r11_57,
+      Text = "",
+      TextXAlignment = "Left",
+      BackgroundTransparency = 1,
+      Position = r11_57,
+      TextColor3 = r11_57,
+      Font = Enum.Font.GothamBold,
+      TextWrapped = true,
+      TextWrapped = true,
+      TextSize = 14,
+    })
+    local r12_57 = UDim2.new(0, 40, 0, 40)
+    r12_57 = Vector2.new(0, 0.5)
+    r12_57 = UDim2.new(0, 12, 0.45, 0)
+    local r8_57 = upval_0("ImageLabel", r5_57, {
+      Size = r12_57,
+      AnchorPoint = r12_57,
+      Position = r12_57,
+      Image = "rbxassetid://",
+    })
+    upval_2(r8_57)
+    local r13_57 = UDim2.new(1, -24, 0, 25)
+    r13_57 = Vector2.new(0.5, 1)
+    r13_57 = UDim2.new(0.5, 0, 1, -8)
+    r13_57 = Color3.fromRGB(220, 220, 220)
+    r13_57 = Color3.fromRGB(50, 200, 50)
+    r9_57 = upval_0("TextButton", r5_57, {
+      Size = r13_57,
+      AnchorPoint = r13_57,
+      Position = r13_57,
+      Text = "Copy",
+      Font = Enum.Font.GothamBold,
+      TextSize = 15,
+      TextColor3 = r13_57,
+      BackgroundColor3 = r13_57,
+    })
+    upval_2(r9_57)
+    r10_57 = tick()
+    ClickConter = 0
+    local r13_57 = function()
+      -- line: [0, 0] id: 58
+      upval_0()
+      if ClickConter ~= 0 then
+        local r0_58 = tick()
+        if 5 < r0_58 - upval_1 then
+        end
+        r0_58 = tick()
+        upval_1 = r0_58
+        setclipboard(upval_2)
+        ClickConter = ClickConter + 1
+        upval_3.Text = "Copied to Clipboard"
+        local r1_58 = Color3.fromRGB(100, 100, 100)
+        upval_3.BackgroundColor3 = r1_58
+        r1_58 = Color3.fromRGB(150, 150, 150)
+        upval_3.TextColor3 = r1_58
+        task.wait(5)
+        upval_3.Text = "Copy"
+        r1_58 = Color3.fromRGB(50, 200, 50)
+        upval_3.BackgroundColor3 = r1_58
+        r1_58 = Color3.fromRGB(220, 220, 220)
+        upval_3.TextColor3 = r1_58
+      end
+      return
+    end
+    r9_57.MouseButton1Click:Connect(r13_57)
+    return
+  end
+  AddUniversalDiscord = r29_18
+  local r29_18 = function(r0_23, r1_23)
+    -- line: [0, 0] id: 23
+    if r1_23[1] then
+      if r1_23.DiscordLink then
+      end
+    end
+    if r1_23[2] then
+      if r1_23.DiscordIcon then
+      end
+    end
+    if r1_23[3] then
+      if r1_23.DiscordTitle then
+      end
+    end
+    local r9_23 = UDim2.new(1, 0, 0, 110)
+    local r5_23 = upval_0("Frame", r0_23, {
+      Size = r9_23,
+      BackgroundColor3 = upval_1.Cor_Options,
+      Name = "Frame",
+      AutomaticSize = "Y",
+    })
+    upval_2(r5_23)
+    upval_3(r5_23)
+    local r10_23 = UDim2.new(1, 0, 0, 25)
+    r10_23 = UDim2.new(0, 12, 0, 0)
+    r10_23 = Color3.fromRGB(255, 0, 0)
+    local r6_23 = upval_0("TextLabel", r5_23, {
+      Size = r10_23,
+      Text = "https://discord.gg/",
+      TextXAlignment = "Left",
+      BackgroundTransparency = 1,
+      Position = r10_23,
+      TextColor3 = r10_23,
+      Font = Enum.Font.GothamBold,
+      TextSize = 14,
+    })
+    local r11_23 = UDim2.new(1, 0, 0, 25)
+    r11_23 = UDim2.new(0, 60, 0, 25)
+    r11_23 = Color3.fromRGB(200, 200, 200)
+    local r7_23 = upval_0("TextLabel", r5_23, {
+      Size = r11_23,
+      Text = "",
+      TextXAlignment = "Left",
+      BackgroundTransparency = 1,
+      Position = r11_23,
+      TextColor3 = r11_23,
+      Font = Enum.Font.GothamBold,
+      TextSize = 14,
+    })
+    local r12_23 = UDim2.new(0, 40, 0, 40)
+    r12_23 = Vector2.new(0, 0.5)
+    r12_23 = UDim2.new(0, 12, 0.45, 0)
+    local r8_23 = upval_0("ImageLabel", r5_23, {
+      Size = r12_23,
+      AnchorPoint = r12_23,
+      Position = r12_23,
+      Image = "rbxassetid://",
+    })
+    upval_2(r8_23)
+    local r13_23 = UDim2.new(1, -24, 0, 25)
+    r13_23 = Vector2.new(0.5, 1)
+    r13_23 = UDim2.new(0.5, 0, 1, -8)
+    r13_23 = Color3.fromRGB(220, 220, 220)
+    r13_23 = Color3.fromRGB(50, 200, 50)
+    r9_23 = upval_0("TextButton", r5_23, {
+      Size = r13_23,
+      AnchorPoint = r13_23,
+      Position = r13_23,
+      Text = "Join",
+      Font = Enum.Font.GothamBold,
+      TextSize = 15,
+      TextColor3 = r13_23,
+      BackgroundColor3 = r13_23,
+    })
+    upval_2(r9_23)
+    r10_23 = tick()
+    ClickConter = 0
+    local r13_23 = function()
+      -- line: [0, 0] id: 24
+      upval_0()
+      if ClickConter ~= 0 then
+        local r0_24 = tick()
+        if 5 < r0_24 - upval_1 then
+        end
+        r0_24 = tick()
+        upval_1 = r0_24
+        setclipboard(upval_2)
+        ClickConter = ClickConter + 1
+        upval_3.Text = "Copied to Clipboard"
+        local r1_24 = Color3.fromRGB(100, 100, 100)
+        upval_3.BackgroundColor3 = r1_24
+        r1_24 = Color3.fromRGB(150, 150, 150)
+        upval_3.TextColor3 = r1_24
+        task.wait(5)
+        upval_3.Text = "Join"
+        r1_24 = Color3.fromRGB(50, 200, 50)
+        upval_3.BackgroundColor3 = r1_24
+        r1_24 = Color3.fromRGB(220, 220, 220)
+        upval_3.TextColor3 = r1_24
+      end
+      return
+    end
+    r9_23.MouseButton1Click:Connect(r13_23)
+    return
+  end
+  AddDiscord = r29_18
+  return r12_18
+end
+MakeWindow = r18_1
+return
