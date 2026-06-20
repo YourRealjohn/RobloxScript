@@ -1,0 +1,825 @@
+local redzlib =
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/refs/heads/main/MythicLib"))()
+
+local Window = redzlib:MakeWindow({"Unnamed Hub Universal", "By : Chris", "testando-redzLibv5.json"})
+Window:AddMinimizeButton({
+  Button = { Image = redzlib:GetIcon("rbxassetid://15298567397"), BackgroundTransparency = 0 },
+  Corner = { CornerRadius = UDim.new(0, 6) }
+})
+
+-- Tabs
+local Tab1 = Window:MakeTab({"Main", "Home"})
+local Tab2 = Window:MakeTab({"Player", "User"})
+local Tab3 = Window:MakeTab({"PvP", "Sword"})
+local Tab4 = Window:MakeTab({"Coming soon", "Target"})
+local Tab5 = Window:MakeTab({"Coming soon", "Eye"})
+local Tab6 = Window:MakeTab({"Script", "List"})
+local Tab7= Window:MakeTab({"Instructions", "Package"})
+local Tab8 = Window:MakeTab({"Update log", "Mail"})
+local Tab9 = Window:MakeTab({"Misc", "Setting"})
+
+
+-- Add a section and a paragraph
+Tab1:AddSection({"Roblox script"})
+Tab1:AddParagraph({
+    Name = " Home Paragraph",
+    Text = "The FE Roblox emote script is not mine I just see it in YouTube so I add the script here Credits to owner:D"
+})
+
+-- Print hello world on button press
+Tab1:AddButton({"Print button", function()
+    print("Hello World!")
+end})
+
+Tab2:AddToggle({
+    Name = "Enable aimbot",  -- if on then show the Fov if off then hide
+    Default = false,
+    Callback = function(state)
+        
+    end    
+})
+
+Tab2:AddSlider({
+    Name = "Fov radius",
+    Min = 1,
+    Max = 400,
+    Default = 16,
+    Callback = function(value)
+        
+    end
+})
+
+
+
+Tab1:AddSection({"Animation"})
+
+local plr = game.Players.LocalPlayer
+
+-- Function to apply custom zombie animations
+local function applyZombieAnimations(plr)
+    local character = plr.Character or plr.CharacterAdded:Wait()
+    local Animate = character:WaitForChild("Animate")
+    Animate.Disabled = true
+
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=3489171152"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=3489171152"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=3489174223"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=3489173414"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616161997"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616156119"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616157476"
+
+    character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+    Animate.Disabled = false
+end
+
+-- Function to apply custom toy animations
+local function applyToyAnimation(plr)
+    local character = plr.Character or plr.CharacterAdded:Wait()
+    local Animate = character:WaitForChild("Animate")
+    Animate.Disabled = true
+
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=782843345"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=782842708"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=782847020"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=782843869"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=782846423"
+
+    character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+    Animate.Disabled = false
+end
+
+-- Function to apply custom Ninja animations
+local function applyNinjaAnimation(plr)
+    local character = plr.Character or plr.CharacterAdded:Wait()
+    local Animate = character:WaitForChild("Animate")
+    Animate.Disabled = true
+
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=656117400"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=656118341"
+	Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+
+    character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+    Animate.Disabled = false
+end
+
+-- Function to apply custom Knight animations
+local function applyKnightAnimation(plr)
+    local character = plr.Character or plr.CharacterAdded:Wait()
+    local Animate = character:WaitForChild("Animate")
+    Animate.Disabled = true
+
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=657595757"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=657568135"
+	Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=657552124"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=657564596"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=658409194"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=658360781"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=657600338"
+
+    character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+    Animate.Disabled = false
+end
+
+-- Function to apply custom Petlog animations
+local function applyPetlogAnimation(plr)
+    local character = plr.Character or plr.CharacterAdded:Wait()
+    local Animate = character:WaitForChild("Animate")
+    Animate.Disabled = true
+
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=657595757"
+	Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=656118341"
+	Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
+	Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
+	Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+	Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
+	Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+
+    character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+    Animate.Disabled = false
+end
+
+-- Button to manually apply zombie animations
+Tab1:AddButton({"Activate Zombie Animation", function()
+    applyZombieAnimations(plr)
+end})
+
+-- Button to manually apply toy animations
+Tab1:AddButton({"Activate Toy Animation", function()
+    applyToyAnimation(plr)
+end})
+
+Tab1:AddButton({"Activate Ninja Animation", function()
+    applyNinjaAnimation(plr)
+end})
+
+Tab1:AddButton({"Activate Knight Animation", function()
+    applyKnightAnimation(plr)
+end})
+
+Tab1:AddButton({"Activate Action Star Animation", function()
+    applyPetlogAnimation(plr)
+end})
+
+Tab1:AddSection({"Free emote Script"})
+-- Button to FE Emote Roblox script
+Tab1:AddButton({"FE free Roblox emote script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/AllEmotes"))()
+end})
+
+Tab2:AddSection({"Player Tab"})
+Tab2:AddParagraph({
+    Name = " Player Paragraph",
+    Text = "Player tab this where you can change your Walkspeed and jump power and more"
+})
+
+Tab2:AddSection({"Jumping"})
+
+-- Toggle for Walkspeed
+local InfiniteJumpEnabled = false
+local jumpConnection
+
+Tab2:AddToggle({
+    Name = "Infinite Jumps",
+    Default = false,
+    Callback = function(state)
+        InfiniteJumpEnabled = state
+        
+        if InfiniteJumpEnabled then
+            -- Connect the event
+            jumpConnection = game:GetService("UserInputService").JumpRequest:Connect(function()
+                game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")
+            end)
+        else
+            -- Disconnect the event
+            if jumpConnection then
+                jumpConnection:Disconnect()
+                jumpConnection = nil
+            end
+        end
+    end    
+})
+
+local jumpPowerEnabled = false
+local savedJumpPower = 50 -- Default jump power
+
+Tab2:AddToggle({
+    Name = "Enable Jump Power",
+    Default = false,
+    Callback = function(state)
+        jumpPowerEnabled = state
+        
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+
+        if humanoid then
+            if state then
+                humanoid.JumpPower = savedJumpPower
+            else
+                humanoid.JumpPower = 50 -- Default jump power
+            end
+        end
+    end
+})
+
+Tab2:AddSlider({
+    Name = "Jump Power Slider",
+    Min = 1,
+    Max = 500,
+    Default = 50,
+    Callback = function(Value)
+        savedJumpPower = Value
+        print("Slider Value Updated:", Value)
+
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+
+        if humanoid and jumpPowerEnabled then
+            humanoid.JumpPower = Value
+            print("JumpPower set to:", Value)
+        end
+    end
+})
+
+local speedEnabled = false -- Toggle state
+local savedSpeed = 16 -- Default speed
+
+Tab2:AddSection({"Walking"})
+
+-- Toggle button
+Tab2:AddToggle({
+    Name = "Enable WalkSpeed",
+    Default = false,
+    Callback = function(state)
+        speedEnabled = state
+        if state then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = savedSpeed
+        else
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16 -- Default speed
+        end
+    end
+})
+
+-- Speed slider
+Tab2:AddSlider({
+    Name = "Speed",
+    Min = 1,
+    Max = 400,
+    Default = 16,
+    Callback = function(value)
+        savedSpeed = value
+        if speedEnabled then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+        end
+    end
+})
+
+
+-- Add a section and a paragraph
+Tab3:AddSection({"PvPTab"})
+Tab3:AddParagraph({
+    Name = "PvP Paragraph",
+    Text = "This is where you can activate Hitbox also Change the Hitbox size using Slider and Change hitbox transparency using Textbox and find more useful thing that you can use in PvP"
+})
+
+local auraSize = 10
+
+Tab3:AddSlider({
+    Name = "Aura Size",
+    Min = 1,
+    Max = 50,
+    Default = 10,
+    Increment = 1,
+    Callback = function(value)
+        auraSize = value
+        if getgenv().configs then
+            getgenv().configs.Size = Vector3.new(auraSize, auraSize, auraSize)
+        end
+    end
+})
+
+Tab3:AddToggle({
+    Name = "Auto kill aura [For sword]",
+    Default = false,
+    Callback = function(state)
+        if getgenv().configs and getgenv().configs.connection then
+            local Disable = getgenv().configs.Disable
+            for _, v in getgenv().configs.connection do
+                v:Disconnect()
+            end
+            if Disable then
+                Disable:Fire()
+                Disable:Destroy()
+            end
+            table.clear(getgenv().configs)
+        end
+
+        if not state then return end
+
+        local Disable = Instance.new("BindableEvent")
+        getgenv().configs = {
+            connection = {},
+            Disable = Disable,
+            Size = Vector3.new(auraSize, auraSize, auraSize),
+            DeathCheck = true
+        }
+
+        local Players = cloneref(game:GetService("Players"))
+        local RunService = cloneref(game:GetService("RunService"))
+        local lp = Players.LocalPlayer
+        local Run = true
+        local Ignorelist = OverlapParams.new()
+        Ignorelist.FilterType = Enum.RaycastFilterType.Include
+
+        local function getchar(plr)
+            return (plr or lp).Character
+        end
+
+        local function gethumanoid(plr)
+            local char = plr:IsA("Model") and plr or getchar(plr)
+            return char and char:FindFirstChildWhichIsA("Humanoid")
+        end
+
+        local function IsAlive(Humanoid)
+            return Humanoid and Humanoid.Health > 0
+        end
+
+        local function GetTouchInterest(Tool)
+            return Tool and Tool:FindFirstChildWhichIsA("TouchTransmitter", true)
+        end
+
+        local function GetCharacters(LocalChar)
+            local chars = {}
+            for _, v in Players:GetPlayers() do
+                local char = getchar(v)
+                if char and char ~= LocalChar then
+                    table.insert(chars, char)
+                end
+            end
+            return chars
+        end
+
+        local function Attack(Tool, TouchPart, Target)
+            if Tool:IsDescendantOf(workspace) then
+                Tool:Activate()
+                firetouchinterest(TouchPart, Target, 1)
+                firetouchinterest(TouchPart, Target, 0)
+            end
+        end
+
+        table.insert(getgenv().configs.connection, Disable.Event:Connect(function()
+            Run = false
+        end))
+
+        task.spawn(function()
+            while Run do
+                local char = getchar()
+                if IsAlive(gethumanoid(char)) then
+                    local Tool = char and char:FindFirstChildWhichIsA("Tool")
+                    local TouchInterest = Tool and GetTouchInterest(Tool)
+
+                    if TouchInterest then
+                        local TouchPart = TouchInterest.Parent
+                        local Characters = GetCharacters(char)
+                        Ignorelist.FilterDescendantsInstances = Characters
+                        local Hits = workspace:GetPartBoundsInBox(TouchPart.CFrame, TouchPart.Size + getgenv().configs.Size, Ignorelist)
+
+                        for _, part in Hits do
+                            local targetChar = part:FindFirstAncestorWhichIsA("Model")
+                            if table.find(Characters, targetChar) then
+                                local targetHum = gethumanoid(targetChar)
+                                if getgenv().configs.DeathCheck then
+                                    if IsAlive(targetHum) then
+                                        Attack(Tool, TouchPart, part)
+                                    end
+                                else
+                                    Attack(Tool, TouchPart, part)
+                                end
+                            end
+                        end
+                    end
+                end
+                RunService.Heartbeat:Wait()
+            end
+        end)
+    end
+})
+
+Tab3:AddTextBox({
+    Name = "Hitbox transparency",
+    Default = "",
+    TextDisappear = false,
+    Callback = function(value)
+        _G.Transparency = tonumber(value)
+    end
+})
+
+-- Button to Activate Hitbox
+Tab3:AddButton({
+    Name = "Activate Hitbox",
+    Callback = function()
+        _G.Disabled = true
+        game:GetService('RunService').RenderStepped:Connect(function()
+            if _G.Disabled then
+                for _, v in ipairs(game:GetService('Players'):GetPlayers()) do
+                    if v.Name ~= game.Players.LocalPlayer.Name then
+                        pcall(function()
+                            local humanoidRootPart = v.Character and v.Character:FindFirstChild("HumanoidRootPart")
+                            if humanoidRootPart then
+                                humanoidRootPart.Size = Vector3.new(_G.HeadSize or 16, _G.HeadSize or 16, _G.HeadSize or 16)
+                                humanoidRootPart.Transparency = _G.Transparency or 0.5
+                                humanoidRootPart.BrickColor = BrickColor.new("Really black") -- Corrected line
+                                humanoidRootPart.Material = Enum.Material.Neon
+                                humanoidRootPart.CanCollide = false
+                            end
+                        end)
+                    end
+                end
+            end
+        end)
+    end
+})
+
+Tab3:AddSection({"Hitbox Size Slider"})
+-- Hitbox slider
+Tab3:AddSlider({
+    Name = "Hitbox size",
+    Min = 1,
+    Max = 50,
+    Default = 16,
+    Callback = function(Value)  -- Use 'Value' instead of 'value'
+        local size = tonumber(Value)  -- Use 'Value' here too
+        if size then
+            _G.HeadSize = size
+            -- Hitbox size changed successfully (No notification)
+        else
+            -- Error handling if needed (No notification)
+        end
+    end
+})
+
+Tab3:AddSection({"Reach"})
+
+Tab3:AddButton({"Coming soon", function()
+    print("Hello World!")
+end})
+
+Tab3:AddSection({"Teleportation Tool with different Name"})
+
+Tab3:AddButton({
+    Name = "Teleporttool",
+    Callback = function()
+        local mouse = game.Players.LocalPlayer:GetMouse()
+        local tool = Instance.new("Tool")
+        tool.RequiresHandle = false
+        tool.Name = "Teleporttool"
+        tool.Activated:Connect(function()
+            local pos = mouse.Hit.p + Vector3.new(0, 2.5, 0)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+        end)
+        tool.Parent = game.Players.LocalPlayer.Backpack
+    end    
+})
+
+Tab3:AddButton({
+    Name = "Petlog Tool",
+    Callback = function()
+        local mouse = game.Players.LocalPlayer:GetMouse()
+        local tool = Instance.new("Tool")
+        tool.RequiresHandle = false
+        tool.Name = "Baltamod Tool"
+        tool.Activated:Connect(function()
+            local pos = mouse.Hit.p + Vector3.new(0, 2.5, 0)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+        end)
+        tool.Parent = game.Players.LocalPlayer.Backpack
+    end    
+})
+
+Tab3:AddButton({
+    Name = "Baltamod Tool",
+    Callback = function()
+        local mouse = game.Players.LocalPlayer:GetMouse()
+        local tool = Instance.new("Tool")
+        tool.RequiresHandle = false
+        tool.Name = "Baltamod Tool"
+        tool.Activated:Connect(function()
+            local pos = mouse.Hit.p + Vector3.new(0, 2.5, 0)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+        end)
+        tool.Parent = game.Players.LocalPlayer.Backpack
+    end    
+})
+
+--// Crouch Animation & Tool Setup
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Crouch"
+tool.Parent = player.Backpack
+
+--// Animation
+local crouchAnim = Instance.new("Animation")
+crouchAnim.AnimationId = "rbxassetid://287325678"
+local crouchTrack = humanoid:LoadAnimation(crouchAnim)
+
+-- Store the default walkspeed
+local defaultWalkSpeed = humanoid.WalkSpeed
+
+--// Tool Equipped Logic (Plays Crouch Animation)
+tool.Equipped:Connect(function()
+    humanoid.WalkSpeed = 5  -- Set WalkSpeed to 5 when the tool is held
+    crouchTrack:Play()  -- Start the crouch animation when tool is held
+end)
+
+tool.Unequipped:Connect(function()
+    humanoid.WalkSpeed = defaultWalkSpeed  -- Restore to the default WalkSpeed when the tool is unequipped
+    crouchTrack:Stop()  -- Stop the crouch animation when tool is unequipped
+end)
+
+Tab3:AddSection({"Something unique Tool"})
+
+Tab3:AddButton({
+    Name = "Buff Mode",
+    Callback = function()
+        local mouse = game.Players.LocalPlayer:GetMouse()
+        local tool = Instance.new("Tool")
+        tool.RequiresHandle = false
+        tool.Name = "Baltamod Tool"
+        tool.Activated:Connect(function()
+            local pos = mouse.Hit.p + Vector3.new(0, 2.5, 0)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+        end)
+        tool.Parent = game.Players.LocalPlayer.Backpack
+    end    
+})
+
+
+Tab3:AddButton({
+    Name = "Over Power Artifact",
+    Callback = function()
+        local mouse = game.Players.LocalPlayer:GetMouse()
+        local tool = Instance.new("Tool")
+        tool.RequiresHandle = true
+        tool.Name = "Baltamod Tool"
+
+        -- Create a handle
+        local handle = Instance.new("Part")
+        handle.Size = Vector3.new(1, 1, 1) -- Adjust size as needed
+        handle.Name = "Handle"
+        handle.Parent = tool
+
+        -- Apply image (Change "IMAGE_ID_HERE" to your actual image ID)
+        local texture = Instance.new("Texture")
+        texture.Texture = "rbxassetid://IMAGE_ID_HERE"
+        texture.StudsPerTileU = 1
+        texture.StudsPerTileV = 1
+        texture.Parent = handle
+
+        local cooldown = false -- Cooldown state
+
+        tool.Activated:Connect(function()
+            if cooldown then return end -- Prevent use during cooldown
+            cooldown = true
+
+            local pos = mouse.Hit.p + Vector3.new(0, 2.5, 0)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
+
+            -- Start cooldown (3 seconds)
+            task.wait(3)
+            cooldown = false
+        end)
+
+        tool.Parent = game.Players.LocalPlayer.Backpack
+    end    
+})
+
+Tab3:AddSection({"Camera Thing"})
+
+Tab3:AddToggle({
+    Name = "Auto aim",
+    Default = false,
+    Callback = function(state)
+        InfiniteJumpEnabled = state
+        
+        if InfiniteJumpEnabled then
+            -- Connect the event
+            jumpConnection = game:GetService("UserInputService").JumpRequest:Connect(function()
+                game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")
+            end)
+        else
+            -- Disconnect the event
+            if jumpConnection then
+                jumpConnection:Disconnect()
+                jumpConnection = nil
+            end
+        end
+    end    
+})
+
+Tab4:AddSection({"GEF TAB"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab5:AddSection({"Natural disasters tab"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tab6:AddSection({"Script Section"})
+local Paragraph = Tab6:AddParagraph({
+    Name = "Script Paragraph",
+    Text = "Script tab this is where you can use other Script also all the script that i made  btw the other script is not mine i just added here"
+})
+
+Tab6:AddSection({"MOST USEFUL SCRIPT FOR ME"})
+
+Tab6:AddButton({
+    Name = "Infinite Yield",
+    Description = "This is Infinite Yield a universal script",
+    Callback = function()
+        Window:Dialog({
+            Title = "Dialog",
+            Text = "To execute the script, click Confirm and click Cancel if you want to abort.",
+            Options = {
+                {"Confirm", function()
+                    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+                end},
+                {"Cancel", function() 
+                    print("Canceled.")
+                end}
+            }
+        })
+    end
+})
+
+local Button = Tab6:AddButton({
+  Name = "Shift lock perm",
+  Description = "<font color='rgb(88, 101, 242)'>Shift Lock perm</font> You can't even able to move the Shift lock or removed this", function()
+print("Hello World!")
+end})
+
+Tab6:AddButton({"AUTO AIM LOCK UNIVERSAL SCRIPT", function()
+    -- Cam lock 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Aepione/Prensado/refs/heads/main/Prensado%20camlock"))()
+end})
+
+Tab6:AddButton({"Equip skins from your Roblox account", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/JOHNGAMING23/Petlog-Hub/refs/heads/main/Skin%20Chooses"))()
+end})
+
+Tab6:AddSection({"SCRIPT THAT I ALWAYS USING"})
+
+Tab6:AddButton({"FPS Gun Ground", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Jonthedruger/LatvixDoc/script/idkgamenameforgot.lua",true))()
+end})
+
+Tab6:AddButton({"Broken System Script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
+end})
+
+Tab6:AddSection({"VERY RARE TO USE"})
+
+Tab6:AddButton({"Jump Script", function() loadstring(game:HttpGet("https://pastefy.app/8XMVXGz8/raw"))()
+end})
+
+Tab6:AddButton({"Build a boat Script", function()
+    print("Hello World!")
+end})
+
+Tab6:AddButton({"Fly Gui", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JOHNGAMING23/Fly-gui/main/Fly gui script"))()
+end})
+
+Tab6:AddButton({"Nameless admin script", function()
+    print("Hello World!")
+end})
+
+Tab7:AddSection({"How to use?"})
+Tab8:AddSection({"About update"})
+
+Tab9:AddSection({"Setting"})
+local Paragraph = Tab9:AddParagraph({
+    Name = "Settings Paragraph",
+    Text = "Setting tab this is where you can Server hop or Rejoin or Join to other server using Job id and others"
+})
+
+Tab9:AddSection({"Join to another Server using Job id"})
+Tab9:AddTextBox({
+    Name = "Job ID",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(v)
+	    _G.Job = v
+		print(v)
+    end
+})
+
+Tab9:AddButton({"Join Server", function()
+game:GetService("TeleportService"):TeleportToPlaceInstance(game.placeId,_G.Job, game.Players.LocalPlayer)
+end})
+
+Tab9:AddSection({"Don't Know what is Job id? Go to Instructions tab"})
+
+Tab9:AddButton({"COPY THE SERVER ID", function()
+    setclipboard(tostring(game.JobId))
+end})
+
+Tab9:AddSection({"Rejoin and Server Hop"})
+
+-- Rejoin button 
+Tab9:AddButton({
+    Name = "Rejoin",
+    Callback = function()
+        Window:Dialog({
+            Title = "Confirm Rejoin",
+            Text = "Are you sure do you really want to rejoin?",
+            Options = {
+                {"Confirm", function()
+                    game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
+                end},
+                {"Cancel", function() 
+                    print("Rejoin canceled.")
+                end}
+            }
+        })
+    end
+})
+
+-- ServerHop Button 
+Tab9:AddButton({
+    Name = "Server Hop",
+    Callback = function()
+        Window:Dialog({
+            Title = "Confirm Server Hop",
+            Text = "Are you sure you do you want to server hop Huh?",
+            Options = {
+                {"Confirm", function()
+                    local HttpService = game:GetService("HttpService")
+                    local TeleportService = game:GetService("TeleportService")
+                    local Player = game.Players.LocalPlayer
+
+                    local function serverHop()
+                        local gameId = game.PlaceId
+                        local servers = {}
+
+                        -- Get the server list
+                        local success, result = pcall(function()
+                            return HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..gameId.."/servers/Public?sortOrder=Desc&limit=100"))
+                        end)
+
+                        if success and result and result.data then
+                            for _, server in ipairs(result.data) do
+                                if server.playing < server.maxPlayers and server.id ~= game.JobId then
+                                    table.insert(servers, server.id)
+                                end
+                            end
+
+                            -- Teleport to a random server
+                            if #servers > 0 then
+                                TeleportService:TeleportToPlaceInstance(gameId, servers[math.random(1, #servers)], Player)
+                            else
+                                warn("No available servers found.")
+                            end
+                        else
+                            warn("Failed to get server list.")
+                        end
+                    end
+
+                    -- Call the function to hop to another server
+                    serverHop()
+                end},
+                {"Cancel", function() end}
+            }
+        })
+    end
+}),,
